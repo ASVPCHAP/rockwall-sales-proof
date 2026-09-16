@@ -32,7 +32,7 @@ export function SiteHeader() {
         </a>
 
         <nav
-          className="hidden items-center gap-3 lg:flex xl:gap-5"
+          className="hidden items-center gap-2.5 xl:flex xl:gap-4"
           aria-label="Primary"
         >
           {nav.map((item) => (
@@ -61,7 +61,7 @@ export function SiteHeader() {
             type="button"
             variant="outline"
             size="icon"
-            className="rounded-sm lg:hidden"
+            className="rounded-sm xl:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls={panelId}
@@ -75,7 +75,7 @@ export function SiteHeader() {
       {open ? (
         <div
           id={panelId}
-          className="lg:hidden border-t border-[var(--rule)] bg-background"
+          className="xl:hidden border-t border-[var(--rule)] bg-background"
         >
           <nav className="wrap flex flex-col py-2" aria-label="Mobile">
             {nav.map((item) => (

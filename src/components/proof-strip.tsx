@@ -90,6 +90,10 @@ export function ProofStrip() {
             <span className="font-medium text-foreground/80">Horizon3 today.</span>{" "}
             {sources.horizon3Press}
           </li>
+          <li>
+            <span className="font-medium text-foreground/80">5 Star Nutrition.</span>{" "}
+            {sources.fiveStar}
+          </li>
         </ol>
 
         <div className="mt-10 grid gap-px overflow-hidden rounded-sm bg-[var(--rule)] sm:grid-cols-2">

@@ -9,6 +9,8 @@ export const sources = {
     "Horizon3 Series E press release, Aug 3, 2026: $250M at a $2B+ valuation, co-led by NightDragon and NEA; 7,000+ customers; 120% year-over-year ARR growth; Series D at a $650M valuation just over a year earlier.",
   craftThesis:
     "Craft Ventures, “Why we invested in Horizon3.ai” — Series C investor thesis for NodeZero / autonomous security.",
+  fiveStar:
+    "Anthony Chapman — 5 Star Nutrition, Regional Sales Manager (prior sales roles, 2018–2021): three locations opened (Sherman; Oklahoma; Cattle Mills, Texas); West Texas scaled to over $120,000 a month; around $690,000 in sales for the year. Motions: Facebook marketing, SEO, local outreach, heavy field work — not AI automation.",
 } as const;
 
 export const gtmTools = [
@@ -133,8 +135,11 @@ export const resumeLedger = [
   },
   {
     org: "Earlier",
-    role: "Ashley Furniture · Health IQ · 2018–2021",
+    role: "5 Star Nutrition · Ashley Furniture · Health IQ · 2018–2021",
     stats: [
+      { value: "3", label: "5 Star locations opened" },
+      { value: "$120k+", label: "5 Star West Texas / month" },
+      { value: "~$690k", label: "5 Star year in sales" },
       { value: "2× $1M", label: "writer at Ashley Furniture" },
       { value: "93%", label: "quota at Health IQ" },
       { value: "100+", label: "accounts / day at Health IQ" },
@@ -533,7 +538,24 @@ export const experience = [
     ],
   },
   {
-    org: "Ashley Furniture · Health IQ · earlier roles",
+    org: "5 Star Nutrition",
+    role: "Regional Sales Manager",
+    dates: "2018 — 2021",
+    href: "#foundations",
+    hrefLabel: "Foundations chapter",
+    points: [
+      "Helped open three new locations: Sherman; Oklahoma; Cattle Mills, Texas.",
+      "Scaled the West Texas region to over $120,000 a month. Finished the year with around $690,000 in sales.",
+      "Facebook marketing, SEO, local outreach, and heavy field work — not AI automation.",
+    ],
+    stats: [
+      { value: "3", label: "locations opened" },
+      { value: "$120k+", label: "West Texas / month" },
+      { value: "~$690k", label: "year in sales" },
+    ],
+  },
+  {
+    org: "Ashley Furniture · Health IQ",
     role: "Prior sales and account management",
     dates: "2018 — 2021",
     points: [
@@ -608,5 +630,50 @@ export const horizon3 = {
     kicker: "Team · Trust but verify",
     title: "The Horizon3.ai team",
     body: "Early sales hire on a Series C NodeZero team — not a co-founder. TOLA GTM was automated in Outreach.io, Salesforce, Make.com, Zapier, and n8n. Still holds early-team shares.",
+  },
+} as const;
+
+export const fiveStarNutrition = {
+  kicker: "Foundations · 5 Star Nutrition",
+  title: "Regional sales before the enterprise book.",
+  lede: "Regional Sales Manager at 5 Star Nutrition — listed under prior sales roles, 2018–2021. The motion was Facebook marketing, SEO, local outreach, and heavy field work. Not AI automation.",
+  thesis:
+    "This is where the seller DNA was built: connecting with anyone, getting past gatekeepers, and getting energy and operations in motion to scale go-to-market. That same motion later shows up in enterprise PE, cybersecurity, and Rockwall.",
+  contribution: [
+    "Helped open three new locations: Sherman; Oklahoma; Cattle Mills, Texas.",
+    "Scaled the West Texas region to over $120,000 a month.",
+    "Finished the year with around $690,000 in sales.",
+  ],
+  motions: [
+    "Facebook marketing",
+    "SEO",
+    "Local outreach",
+    "Heavy field work",
+  ],
+  stats: [
+    {
+      value: "3",
+      label: "new locations opened",
+      detail: "Sherman; Oklahoma; Cattle Mills, Texas.",
+    },
+    {
+      value: "$120k+",
+      label: "West Texas / month",
+      detail: "Region scaled to over $120,000 a month.",
+    },
+    {
+      value: "~$690k",
+      label: "year in sales",
+      detail: "Finished the year with around $690,000 in sales.",
+    },
+  ],
+  photo: {
+    image: null,
+    width: 1600,
+    height: 900,
+    alt: "5 Star Nutrition photo forthcoming.",
+    kicker: "Field · West Texas",
+    title: "Photo forthcoming",
+    body: "Store and field photos will sit here. No stock imagery, no invented storefronts.",
   },
 } as const;
