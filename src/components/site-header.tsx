@@ -1,21 +1,28 @@
 "use client";
 
-import { useState } from "react";
-import { Menu } from "lucide-react";
+import { useEffect, useId, useState } from "react";
+import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { nav, site } from "@/lib/site";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const panelId = useId();
+
+  useEffect(() => {
+    if (!open) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = original;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--rule)] bg-[color-mix(in_oklch,var(--background)_88%,transparent)] backdrop-blur-md">
@@ -29,12 +36,15 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-4 lg:flex xl:gap-7" aria-label="Primary">
+        <nav
+          className="hidden items-center gap-3 xl:flex xl:gap-5"
+          aria-label="Primary"
+        >
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-[0.72rem] tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-foreground xl:text-[0.78rem] xl:tracking-[0.12em]"
+              className="text-[0.72rem] tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-foreground"
             >
               {item.label}
             </a>
@@ -52,46 +62,61 @@ export function SiteHeader() {
             </a>
           </Button>
 
-          <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-sm lg:hidden"
-                aria-label="Open menu"
-              >
-                <Menu />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="relative w-[min(100%,20rem)] p-6">
-              <SheetHeader className="px-0">
-                <SheetTitle className="font-heading text-left text-xl font-normal">
-                  {site.firm}
-                </SheetTitle>
-              </SheetHeader>
-              <nav className="mt-6 flex flex-col gap-1" aria-label="Mobile">
-                {nav.map((item) => (
-                  <SheetClose asChild key={item.href}>
-                    <a
-                      href={item.href}
-                      className="border-b border-[var(--rule)] py-3 text-sm tracking-[0.12em] uppercase"
-                    >
-                      {item.label}
-                    </a>
-                  </SheetClose>
-                ))}
-              </nav>
-              <SheetClose asChild>
-                <Button asChild className="mt-8 h-11 w-full rounded-sm uppercase">
-                  <a href={site.calendarUrl} rel="noreferrer" target="_blank">
-                    Book assessment
-                  </a>
-                </Button>
-              </SheetClose>
-            </SheetContent>
-          </Sheet>
+          <Button
+            type="button"
+            variant="outline"
+            size="icon"
+            className="rounded-sm xl:hidden"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls={panelId}
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? <X /> : <Menu />}
+          </Button>
         </div>
       </div>
+
+      {open ? (
+        <div
+          className="fixed inset-0 z-50 xl:hidden"
+          id={panelId}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Site menu"
+        >
+          <button
+            type="button"
+            className="absolute inset-0 bg-black/70"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+          />
+          <div className="absolute inset-y-0 right-0 flex w-[min(100%,20rem)] flex-col border-l border-[var(--rule)] bg-background p-6 shadow-lg">
+            <p className="font-heading text-xl">{site.firm}</p>
+            <nav className="mt-6 flex flex-col" aria-label="Mobile">
+              {nav.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="border-b border-[var(--rule)] py-3 text-sm tracking-[0.12em] text-foreground uppercase"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+            <a
+              href={site.calendarUrl}
+              rel="noreferrer"
+              target="_blank"
+              className="bg-primary text-primary-foreground mt-8 inline-flex h-11 items-center justify-center rounded-sm px-4 text-[0.78rem] tracking-[0.08em] uppercase"
+              onClick={() => setOpen(false)}
+            >
+              Book assessment
+            </a>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }
