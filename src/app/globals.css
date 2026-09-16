@@ -160,3 +160,27 @@
     width: min(70rem, calc(100% - 2.5rem));
   }
 }
+
+/* Native <dialog> lives in the top layer — immune to sticky/backdrop-filter containing blocks. */
+.proof-lightbox[open] {
+  width: min(72rem, calc(100% - 2rem));
+  max-width: 72rem;
+  max-height: calc(100svh - 2rem);
+  margin: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+}
+
+.proof-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.proof-lightbox-panel {
+  overflow: hidden;
+  border-radius: 4px;
+  background: #141210;
+  color: #f3eee4;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}

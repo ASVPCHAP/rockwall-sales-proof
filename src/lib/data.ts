@@ -87,7 +87,16 @@ export const resumeLedger = [
       { value: "$160M+", label: "GTV pipeline, six months" },
       { value: "16", label: "supplier partners" },
       { value: "~$600B", label: "aggregate partner spend" },
+      { value: "5-yr", label: "partnership (excl. / rev share)" },
       { value: "~60%", label: "LLM token-cost cut" },
+    ],
+  },
+  {
+    org: "Rockwall Partners",
+    role: "Founder / AI Operator · Feb 2025–present",
+    stats: [
+      { value: "n8n / Make / Zapier", label: "SMB automation installs" },
+      { value: "OpenRouter", label: "model-cost management" },
     ],
   },
   {
@@ -453,6 +462,7 @@ export const experience = [
     stats: [
       { value: "$160M+", label: "GTV pipeline, six months" },
       { value: "16", label: "partners · ~$600B spend" },
+      { value: "5-yr", label: "excl. / rev share / ownership" },
       { value: "~60%", label: "LLM token-cost cut" },
     ],
   },
@@ -464,6 +474,10 @@ export const experience = [
       "AI operating-partner consultancy for owner-operated small and mid-size businesses — GTM, operations, and back-office systems.",
       "Client automations in n8n, Make.com, and Zapier, integrating field-service and back-office tools. GTM stack also includes Outreach.io and Salesforce.",
       "Hands-on OpenRouter customer for internal tooling and client-facing AI systems — model-cost management, not slideware.",
+    ],
+    stats: [
+      { value: "n8n / Make / Zapier", label: "SMB automation installs" },
+      { value: "OpenRouter", label: "model-cost management" },
     ],
   },
   {
@@ -479,6 +493,8 @@ export const experience = [
     stats: [
       { value: "$1.5M", label: "monthly GTV from zero" },
       { value: "~30", label: "new members / month" },
+      { value: "1,800+", label: "accounts · $92M spend" },
+      { value: "40% / 18%", label: "max / avg savings" },
       { value: "20+ / 33", label: "Valcore contracts / members" },
     ],
   },
@@ -495,6 +511,7 @@ export const experience = [
       { value: "$23M", label: "quarterly GTV quota" },
       { value: "80%+", label: "average attainment" },
       { value: "Top 1%", label: "2023 and 2024" },
+      { value: "$81.1M", label: "2025 C/W projected spend" },
     ],
   },
   {
@@ -512,6 +529,7 @@ export const experience = [
     stats: [
       { value: "89%", label: "vs $1M quota" },
       { value: "TOLA", label: "from scratch" },
+      { value: "GTM", label: "Outreach.io · Salesforce · Make · Zapier · n8n" },
     ],
   },
   {
@@ -586,7 +604,7 @@ export const horizon3 = {
     image: "/photos/horizon3-team.webp",
     width: 1100,
     height: 619,
-    alt: "Horizon3.ai team photo: colleagues standing together under a HORIZON3.ai Trust But Verify screen.",
+    alt: "Horizon3.ai team photo.",
     kicker: "Team · Trust but verify",
     title: "The Horizon3.ai team",
     body: "Early sales hire on a Series C NodeZero team — not a co-founder. TOLA GTM was automated in Outreach.io, Salesforce, Make.com, Zapier, and n8n. Still holds early-team shares.",

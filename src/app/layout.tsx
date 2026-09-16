@@ -46,6 +46,10 @@ export const metadata: Metadata = {
     "CoreTrust",
     "OpenRouter",
     "n8n",
+    "Outreach.io",
+    "Salesforce",
+    "Make.com",
+    "Zapier",
   ],
   openGraph: {
     type: "website",

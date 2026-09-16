@@ -49,13 +49,15 @@ export function CaseStudies() {
                     <p className="text-[0.68rem] tracking-[0.16em] text-muted-foreground uppercase">
                       Results
                     </p>
-                    <ul className="mt-3 space-y-2">
+                    <ul className="mt-3 space-y-3">
                       {study.results.map((result) => (
                         <li
                           key={result}
-                          className="border-l-2 border-[var(--brass)] pl-3 text-sm leading-snug"
+                          className="border-l-2 border-[var(--brass)] pl-3"
                         >
-                          {result}
+                          <p className="font-heading text-lg leading-snug tracking-tight sm:text-xl">
+                            {result}
+                          </p>
                         </li>
                       ))}
                     </ul>
