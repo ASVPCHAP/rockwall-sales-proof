@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CultureFigure } from "@/components/culture-figure";
+import { ValcoreClosedWon } from "@/components/valcore-closed-won";
 import { caseStudies, valcoreOffsite } from "@/lib/data";
 
 export function CaseStudies() {
@@ -75,6 +76,11 @@ export function CaseStudies() {
                     </div>
                   </div>
                 </CardContent>
+                {study.slug === "valcore-gpo" ? (
+                  <div className="border-t border-[var(--rule)] px-6 pb-6">
+                    <ValcoreClosedWon />
+                  </div>
+                ) : null}
               </Card>
               {study.slug === "valcore-gpo" ? (
                 <CultureFigure {...valcoreOffsite} />

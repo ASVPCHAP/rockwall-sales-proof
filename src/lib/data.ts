@@ -4,7 +4,7 @@ export const sources = {
   coretrust2025:
     "CoreTrust report: Opportunities — Current Year — C/W by AE. Fiscal 2025 quarterly Closed/Won subtotals and Q4 YTD grand totals.",
   valcore:
-    "Operating snapshot stated by Anthony Chapman for Valcore GPO (the public Valstone GPO): 20+ contracts, 33 members, still growing.",
+    "Operating snapshot stated by Anthony Chapman for Valcore GPO (the public Valstone GPO): 20+ contracts, 33 members, still growing. HubSpot Closed/Won by category: 131 Opted-In (Approved) deals during his Valstone/Valcore tenure, tied to signed-member activity. Deal counts only — no GTV inferred from that chart.",
   horizon3Press:
     "Horizon3 Series E press release, Aug 3, 2026: $250M at a $2B+ valuation, co-led by NightDragon and NEA; 7,000+ customers; 120% year-over-year ARR growth; Series D at a $650M valuation just over a year earlier.",
   craftThesis:
@@ -115,6 +115,7 @@ export const resumeLedger = [
       { value: "40% / 18%", label: "max / avg supplier savings" },
       { value: "20+", label: "Valcore contracts" },
       { value: "33", label: "Valcore members, still growing" },
+      { value: "131", label: "Closed/Won Opted-In deals (signed members)" },
     ],
   },
   {
@@ -275,7 +276,7 @@ export const liveProperties = [
     name: "Valcore GPO",
     href: "https://valcoregpo.com/",
     hrefLabel: "valcoregpo.com",
-    note: "Public face of the Valstone GPO. Rampart helped launch Valcore. 20+ contracts. 33 members. Still growing.",
+    note: "Public face of the Valstone GPO. Rampart helped launch Valcore. 20+ contracts. 33 members. Still growing. 131 Closed/Won Opted-In deals (signed members) during tenure.",
   },
 ] as const;
 
@@ -287,6 +288,28 @@ export const valcoreOffsite = {
   kicker: "Valstone DBA Valcore · Montreal",
   title: "Operators and Valstone, on the ice",
   body: "We brought operators and the Valstone team together in Montreal to review last year’s results and kick off the year ahead — then a friendly competition (questionable technique included) at the Royal Montreal Curling Club, founded 1807.",
+} as const;
+
+export const valcoreClosedWon = {
+  image: "/proof/valcore-closed-won-by-category.png",
+  width: 1801,
+  height: 1422,
+  deals: 131,
+  title: "Closed/Won opportunities by category",
+  subtitle: "131 HubSpot deals in Opted-In (Approved)",
+  alt: "HubSpot pie chart: Closed/Won opportunities by category for 131 Opted-In (Approved) deals during Anthony Chapman’s Valstone/Valcore tenure. Office Supplies 40 (30.5%), MRO 34 (26.0%), Packaging 29 (22.1%), Paint 9 (6.9%), Uniform Rental 9 (6.9%), Car Rental 7 (5.3%), Batteries 1 (0.8%), Small Parcels 1 (0.8%), Uncategorized 1 (0.8%).",
+  note: "Closed/Won Opted-In deals from Anthony’s tenure at Valstone/Valcore, tied to signed-member activity. Counts are HubSpot deal volume — not GTV or spend.",
+  categories: [
+    { name: "Office Supplies", deals: 40, share: "30.5%" },
+    { name: "MRO", deals: 34, share: "26.0%" },
+    { name: "Packaging", deals: 29, share: "22.1%" },
+    { name: "Paint", deals: 9, share: "6.9%" },
+    { name: "Uniform Rental", deals: 9, share: "6.9%" },
+    { name: "Car Rental", deals: 7, share: "5.3%" },
+    { name: "Batteries", deals: 1, share: "0.8%" },
+    { name: "Small Parcels", deals: 1, share: "0.8%" },
+    { name: "Uncategorized", deals: 1, share: "0.8%" },
+  ],
 } as const;
 
 export const supplierContractsNamed = [
@@ -327,7 +350,12 @@ export const caseStudies = [
     hrefLabel: "valcoregpo.com",
     summary:
       "Under Valstone, I helped stand up an entire group purchasing organization in under a year — no existing GTM, pipeline, or contract book. Valcore is the public face of that GPO: group purchasing power for growing companies, from a spend file to GPO-negotiated pricing. It is the live member brand for the same from-zero motion that scaled to $1.5M monthly GTV. Rampart helped launch the Valcore initiative at Valstone; the white-label GPO lineage continues on the Rampart chapter.",
-    results: ["20+ contracts", "33 members", "Still growing"],
+    results: [
+      "20+ contracts",
+      "33 members",
+      "Still growing",
+      "131 Closed/Won Opted-In deals (signed members)",
+    ],
     tags: ["GPO", "B2B procurement", "Go-to-market", "Valstone", "Rampart"],
   },
   {
@@ -522,7 +550,7 @@ export const experience = [
     dates: "Dec 2025 — Jul 2026 · Dallas",
     points: [
       "Launched a B2B procurement platform from zero: GTM, pipeline, and contracts to $1.5M monthly GTV and ~30 new enterprise members per month.",
-      "Helped stand up the public GPO — Valcore (valcoregpo.com) — in under a year: 20+ contracts, 33 members, still growing. Rampart helped launch that Valcore initiative.",
+      "Helped stand up the public GPO — Valcore (valcoregpo.com) — in under a year: 20+ contracts, 33 members, still growing. Rampart helped launch that Valcore initiative. HubSpot Closed/Won during tenure: 131 Opted-In (Approved) deals tied to signed-member activity (deal counts, not GTV).",
       "Directed analysis of 1,800+ target accounts representing $92M in addressable spend.",
       "Negotiated supplier agreements delivering up to 40% savings and an 18% average across MRO, logistics, IT, and indirect.",
     ],
@@ -532,6 +560,7 @@ export const experience = [
       { value: "1,800+", label: "accounts · $92M spend" },
       { value: "40% / 18%", label: "max / avg savings" },
       { value: "20+ / 33", label: "Valcore contracts / members" },
+      { value: "131", label: "Closed/Won Opted-In (signed members)" },
     ],
   },
   {
