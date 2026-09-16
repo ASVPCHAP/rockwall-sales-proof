@@ -12,10 +12,10 @@ export function CaseStudies() {
           Work in the operator&apos;s own numbers.
         </h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-          Live products first — AgeriteCRM and Valcore GPO — then the Upwork
-          entries: ops rebuilds, LLM cost control, the Valstone GTM behind
-          Valcore, and PE enterprise sales. Results are copied from those
-          sources, not dressed up.
+          Live products first — AgeriteCRM and Valcore GPO — then ops rebuilds,
+          LLM cost control, the Valstone GTM behind Valcore, PE enterprise
+          sales, and Horizon3.ai (TOLA / Series C GTM). Results are copied from
+          those sources, not dressed up.
         </p>
 
         <div className="mt-12 grid gap-5">
@@ -33,8 +33,9 @@ export function CaseStudies() {
                     <a
                       href={study.href}
                       className="text-sm text-[var(--brass)] underline-offset-4 hover:underline"
-                      rel="noreferrer"
-                      target="_blank"
+                      {...(study.href.startsWith("http")
+                        ? { rel: "noreferrer", target: "_blank" }
+                        : {})}
                     >
                       {study.hrefLabel} →
                     </a>

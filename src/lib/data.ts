@@ -5,6 +5,10 @@ export const sources = {
     "CoreTrust report: Opportunities — Current Year — C/W by AE. Fiscal 2025 quarterly Closed/Won subtotals and Q4 YTD grand totals.",
   valcore:
     "Operating snapshot stated by Anthony Chapman for Valcore GPO (the public Valstone GPO): 20+ contracts, 33 members, still growing.",
+  horizon3Press:
+    "Horizon3 Series E press release, Aug 3, 2026: $250M at a $2B+ valuation, co-led by NightDragon and NEA; 7,000+ customers; 120% year-over-year ARR growth; Series D at a $650M valuation just over a year earlier.",
+  craftThesis:
+    "Craft Ventures, “Why we invested in Horizon3.ai” — Series C investor thesis for NodeZero / autonomous security.",
 } as const;
 
 export const proofMetrics = [
@@ -305,6 +309,28 @@ export const caseStudies = [
       "Data privacy",
     ],
   },
+  {
+    slug: "horizon3-tola",
+    kicker: "Cybersecurity · Series C GTM",
+    title: "Horizon3.ai — early sales hire, TOLA from zero",
+    href: "#horizon3",
+    hrefLabel: "Horizon3 chapter",
+    summary:
+      "Senior Account Executive / New Business Development, Jan 2022–Sep 2023. One of the first sales hires at a Series C cybersecurity company selling NodeZero. I played a foundational role building the TOLA region, established go-to-market strategy, automated GTM with the tools in that seat, and built VAR / MSSP partnerships — 89% attainment against a $1M quota. Early-team equity, still held. Not a co-founder.",
+    results: [
+      "89% attainment against a $1M quota",
+      "TOLA territory from scratch; GTM strategy; VAR / MSSP partnerships; GTM automation",
+      "RSA, Black Hat, and DEF CON",
+      "Early-team shares still held — remains invested in the company’s success",
+    ],
+    tags: [
+      "New business",
+      "Cybersecurity",
+      "NodeZero",
+      "GTM automation",
+      "Channel (VAR / MSSP)",
+    ],
+  },
 ] as const;
 
 export const method = [
@@ -368,10 +394,13 @@ export const experience = [
     org: "Horizon3.ai",
     role: "Senior Account Executive / New Business Development",
     dates: "Jan 2022 — Sep 2023 · Dallas",
+    href: "#horizon3",
+    hrefLabel: "Horizon3 chapter",
     points: [
-      "One of the first sales hires at a Series C cybersecurity company; evangelized NodeZero against entrenched incumbents.",
-      "Built the TOLA territory from scratch and established VAR / MSSP partnerships.",
+      "One of the first sales hires at a Series C cybersecurity company; evangelized NodeZero into a market of entrenched incumbents.",
+      "Foundational TOLA build-out from scratch: GTM strategy, VAR / MSSP partnerships, and GTM automation.",
       "89% attainment against a $1M quota via cold outreach, LinkedIn, and presence at RSA, Black Hat, and DEF CON.",
+      "Received shares as an early team member; still holds that equity and remains invested in the company’s success — not a co-founder.",
     ],
   },
 ] as const;
@@ -380,3 +409,51 @@ export const education = [
   "Western Governors University — B.S., Business Management (Information Technology)",
   "Amarillo College — Business Administration and Management",
 ] as const;
+
+export const horizon3 = {
+  kicker: "Horizon3.ai · Jan 2022 – Sep 2023",
+  title: "Early sales hire. TOLA from zero. Still on the cap table.",
+  lede: "Senior Account Executive / New Business Development — one of the first sales hires at a Series C cybersecurity company selling NodeZero. I was not a co-founder. I received shares as an early team member, still hold them, and remain invested in the company’s success.",
+  contribution: [
+    "Foundational role building out the TOLA region from scratch.",
+    "Established go-to-market strategy and VAR / MSSP partnerships.",
+    "Automated GTM using the tools in that early sales seat.",
+    "89% attainment against a $1M quota; RSA, Black Hat, and DEF CON.",
+  ],
+  bridge:
+    "That was the groundwork I was hired to do. Since then the company has scaled NodeZero into the AI-native proactive security story in its own Series E — a trajectory I did not lead, and do not claim as a personal round.",
+  today: [
+    {
+      value: "$250M",
+      label: "Series E, Aug 3, 2026",
+      detail: "Co-led by NightDragon and NEA. Company press.",
+    },
+    {
+      value: "$2B+",
+      label: "post-money valuation",
+      detail: "Tripled from a $650M Series D valuation just over a year earlier.",
+    },
+    {
+      value: "7,000+",
+      label: "organizations",
+      detail: "Company-reported in the Series E release, with 120% YoY ARR growth.",
+    },
+  ],
+  links: [
+    {
+      href: "https://medium.com/craft-ventures/why-we-invested-in-horizon3-ai-8686e18d3613",
+      label: "Craft Ventures — Why we invested in Horizon3.ai",
+      detail: "Series C investor thesis for NodeZero / autonomous security, from the period I was on the team.",
+    },
+    {
+      href: "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+      label: "Horizon3 Series E press — Aug 3, 2026",
+      detail: "$250M at a $2B+ valuation; 7,000+ customers; 120% ARR growth.",
+    },
+    {
+      href: "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/",
+      label: "TechCrunch coverage of the Series E",
+      detail: "Independent write-up of the same round. Figures on this page follow the company release.",
+    },
+  ],
+} as const;

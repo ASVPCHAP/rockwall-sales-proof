@@ -29,12 +29,12 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-4 lg:flex xl:gap-7" aria-label="Primary">
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-[0.78rem] tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-foreground"
+              className="text-[0.72rem] tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-foreground xl:text-[0.78rem] xl:tracking-[0.12em]"
             >
               {item.label}
             </a>

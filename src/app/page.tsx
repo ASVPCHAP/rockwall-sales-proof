@@ -3,6 +3,7 @@ import { CaseStudies } from "@/components/case-studies";
 import { Contact } from "@/components/contact";
 import { CoreTrustProof } from "@/components/coretrust-proof";
 import { Hero } from "@/components/hero";
+import { Horizon3Section } from "@/components/horizon3-section";
 import { HowIWork } from "@/components/how-i-work";
 import { ProofStrip } from "@/components/proof-strip";
 import { SiteFooter } from "@/components/site-footer";
@@ -24,6 +25,7 @@ export default function Home() {
         <CoreTrustProof />
         <CaseStudies />
         <HowIWork />
+        <Horizon3Section />
         <About />
         <Contact />
       </main>

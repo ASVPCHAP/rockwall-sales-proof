@@ -41,6 +41,14 @@ export function About() {
                 {job.role}
                 <span className="text-muted-foreground"> · {job.org}</span>
               </h3>
+              {"href" in job && job.href ? (
+                <a
+                  href={job.href}
+                  className="mt-1 inline-block text-sm text-[var(--brass)] underline-offset-4 hover:underline"
+                >
+                  {job.hrefLabel} →
+                </a>
+              ) : null}
               <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
                 {job.points.map((point) => (
                   <li key={point}>{point}</li>
