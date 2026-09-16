@@ -1,4 +1,5 @@
-import { CultureFigure } from "@/components/culture-figure";
+import Image from "next/image";
+
 import { fiveStarNutrition, sources } from "@/lib/data";
 
 export function FoundationsSection() {
@@ -32,8 +33,81 @@ export function FoundationsSection() {
             </div>
           ))}
         </dl>
+        <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted-foreground">
+          {fiveStarNutrition.reconciliation}
+        </p>
 
-        <CultureFigure className="mt-10" {...fiveStarNutrition.photo} />
+        <dl className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          {fiveStarNutrition.overlayStats.map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-sm border border-[var(--rule)] p-4"
+            >
+              <dt className="font-heading text-2xl tracking-tight">
+                {stat.value}
+              </dt>
+              <dd className="mt-1 text-xs leading-snug text-muted-foreground">
+                {stat.label}
+              </dd>
+            </div>
+          ))}
+        </dl>
+
+        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          {fiveStarNutrition.gallery.map((shot) => (
+            <figure
+              key={shot.id}
+              className="overflow-hidden rounded-sm border border-[var(--rule)] bg-card"
+            >
+              <Image
+                src={shot.image}
+                alt={shot.alt}
+                width={shot.width}
+                height={shot.height}
+                className="h-auto w-full bg-[#111]"
+                sizes="(min-width: 1024px) 22rem, 100vw"
+              />
+              <figcaption className="p-5">
+                <p className="text-[0.68rem] tracking-[0.16em] text-[var(--brass)] uppercase">
+                  Overlay
+                </p>
+                <h3 className="mt-2 font-heading text-xl tracking-tight">
+                  {shot.kicker}
+                </h3>
+                <ul className="mt-3 space-y-2">
+                  {shot.stats.map((line) => (
+                    <li
+                      key={line}
+                      className="border-l-2 border-[var(--brass)] pl-3 text-sm leading-snug"
+                    >
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          {fiveStarNutrition.extraProof.map((card) => (
+            <div
+              key={card.label}
+              className="rounded-sm border border-[var(--rule)] p-5"
+            >
+              <p className="text-[0.68rem] tracking-[0.16em] text-[var(--brass)] uppercase">
+                {card.kicker}
+              </p>
+              <p className="font-heading mt-3 text-3xl tracking-tight">
+                {card.value}
+              </p>
+              <p className="mt-2 text-sm">{card.label}</p>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                {card.detail}
+              </p>
+            </div>
+          ))}
+        </div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-2">
           <div>

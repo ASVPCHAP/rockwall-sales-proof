@@ -10,7 +10,7 @@ export const sources = {
   craftThesis:
     "Craft Ventures, “Why we invested in Horizon3.ai” — Series C investor thesis for NodeZero / autonomous security.",
   fiveStar:
-    "Anthony Chapman — 5 Star Nutrition, Regional Sales Manager (prior sales roles, 2018–2021): three locations opened (Sherman; Oklahoma; Cattle Mills, Texas); West Texas scaled to over $120,000 a month; around $690,000 in sales for the year. Motions: Facebook marketing, SEO, local outreach, heavy field work — not AI automation.",
+    "Anthony Chapman — 5 Star Nutrition, Regional Sales Manager (prior sales 2018–2021), plus overlay text on his field photos: three locations (Sherman; Oklahoma; Cattle Mills, Texas); West Texas monthly run-rate $30k → $120k in six months; year finish around $690,000. WTAMU opener: 500+ products, gym/university prospecting, YOY 25–50%. Tornado Alley CrossFit: 2-year deal, 150+ members signed, +50 members grown. Anytime Fitness: 2-year partnership, one of the largest gym chains in TX. Grand Opening #3 (Sherman, TX): construction buildout, hiring/training, local outreach. Motions: Facebook, SEO, local outreach, field work — not AI.",
 } as const;
 
 export const gtmTools = [
@@ -138,8 +138,8 @@ export const resumeLedger = [
     role: "5 Star Nutrition · Ashley Furniture · Health IQ · 2018–2021",
     stats: [
       { value: "3", label: "5 Star locations opened" },
-      { value: "$120k+", label: "5 Star West Texas / month" },
-      { value: "~$690k", label: "5 Star year in sales" },
+      { value: "$30k→$120k", label: "5 Star monthly run-rate, 6 months" },
+      { value: "~$690k", label: "5 Star year finish" },
       { value: "2× $1M", label: "writer at Ashley Furniture" },
       { value: "93%", label: "quota at Health IQ" },
       { value: "100+", label: "accounts / day at Health IQ" },
@@ -544,14 +544,15 @@ export const experience = [
     href: "#foundations",
     hrefLabel: "Foundations chapter",
     points: [
-      "Helped open three new locations: Sherman; Oklahoma; Cattle Mills, Texas.",
-      "Scaled the West Texas region to over $120,000 a month. Finished the year with around $690,000 in sales.",
+      "Helped open three new locations: Sherman; Oklahoma; Cattle Mills, Texas. Grand Opening #3 (Sherman, TX): assisted full construction buildout, hiring/training of the team, and local outreach marketing.",
+      "Grew the West Texas region from $30k to $120k monthly revenue in six months (run-rate). Finished the year around $690k — not a $120k×12 annualization.",
+      "Field partnerships: WTAMU Women’s Basketball Opener (500+ products; gyms/universities; YOY 25–50%); Tornado Alley CrossFit (2-year deal, 150+ members signed, +50 grown); Anytime Fitness (2-year partnership, one of the largest gym chains in TX).",
       "Facebook marketing, SEO, local outreach, and heavy field work — not AI automation.",
     ],
     stats: [
       { value: "3", label: "locations opened" },
-      { value: "$120k+", label: "West Texas / month" },
-      { value: "~$690k", label: "year in sales" },
+      { value: "$30k→$120k", label: "monthly run-rate, 6 months" },
+      { value: "~$690k", label: "year finish" },
     ],
   },
   {
@@ -639,9 +640,12 @@ export const fiveStarNutrition = {
   lede: "Regional Sales Manager at 5 Star Nutrition — listed under prior sales roles, 2018–2021. The motion was Facebook marketing, SEO, local outreach, and heavy field work. Not AI automation.",
   thesis:
     "This is where the seller DNA was built: connecting with anyone, getting past gatekeepers, and getting energy and operations in motion to scale go-to-market. That same motion later shows up in enterprise PE, cybersecurity, and Rockwall.",
+  reconciliation:
+    "$30k → $120k in six months is West Texas monthly run-rate. Around $690k is the year finish — ramp, not $120k × 12.",
   contribution: [
     "Helped open three new locations: Sherman; Oklahoma; Cattle Mills, Texas.",
-    "Scaled the West Texas region to over $120,000 a month.",
+    "Grand Opening #3 (Sherman, TX): assisted full construction buildout, hiring/training of the team, and local outreach marketing.",
+    "Regional Sales Manager, West Texas: grew the region from $30k to $120k monthly revenue in six months.",
     "Finished the year with around $690,000 in sales.",
   ],
   motions: [
@@ -657,23 +661,75 @@ export const fiveStarNutrition = {
       detail: "Sherman; Oklahoma; Cattle Mills, Texas.",
     },
     {
-      value: "$120k+",
-      label: "West Texas / month",
-      detail: "Region scaled to over $120,000 a month.",
+      value: "$30k→$120k",
+      label: "monthly run-rate in 6 months",
+      detail: "West Texas region. Overlay: Regional Sales Manager.",
     },
     {
       value: "~$690k",
-      label: "year in sales",
-      detail: "Finished the year with around $690,000 in sales.",
+      label: "year finish",
+      detail: "Around $690,000 in sales for the year — not the monthly peak annualized.",
     },
   ],
-  photo: {
-    image: null,
-    width: 1600,
-    height: 900,
-    alt: "5 Star Nutrition photo forthcoming.",
-    kicker: "Field · West Texas",
-    title: "Photo forthcoming",
-    body: "Store and field photos will sit here. No stock imagery, no invented storefronts.",
-  },
+  extraProof: [
+    {
+      kicker: "Grand Opening #3 · Sherman, TX",
+      value: "Buildout",
+      label: "Construction, hiring, local outreach",
+      detail:
+        "Assisted full construction buildout, hiring/training of the team, and local outreach marketing. Overlay text from Anthony’s field set; photo not in this gallery.",
+    },
+    {
+      kicker: "WTAMU opener overlay",
+      value: "25–50%",
+      label: "YOY growth",
+      detail: "Grow YOY 25–50%, as written on the West Texas A&M Women’s Basketball Opener photo.",
+    },
+  ],
+  overlayStats: [
+    { value: "500+", label: "products sold at the WTAMU opener" },
+    { value: "2yr", label: "Tornado Alley CrossFit deal" },
+    { value: "150+", label: "members signed up" },
+    { value: "50+", label: "members the gym grew" },
+    { value: "2yr", label: "Anytime Fitness partnership" },
+  ],
+  gallery: [
+    {
+      id: "wtamu-opener",
+      image: "/photos/fivestar-wtamu-opener.jpg",
+      width: 1249,
+      height: 1717,
+      alt: "5 Star Nutrition table at the West Texas A&M Women’s Basketball Opener: Anthony Chapman with a mascot in buffalo horns. Overlay: sold over 500 supplement products; prospected gyms and universities for supplement services; YOY growth 25–50%.",
+      kicker: "West Texas A&M Women’s Basketball Opener",
+      stats: [
+        "Sold over 500 supplement products at this event",
+        "Prospect gyms, universities, etc. for supplement services",
+        "Grow YOY 25–50%",
+      ],
+    },
+    {
+      id: "tornado-alley",
+      image: "/photos/fivestar-tornado-alley.jpg",
+      width: 1320,
+      height: 1748,
+      alt: "Group photo on the Tornado Alley CrossFit floor with Anthony Chapman in a blue 5 Star Nutrition polo. Overlay: secured a 2-year deal; over 150 members signed up; helped grow their business by 50+ members.",
+      kicker: "Partnership w/ Tornado Alley CrossFit",
+      stats: [
+        "Secured a 2yr deal",
+        "Over 150 members signed up",
+        "Helped grow their business by 50+ members",
+      ],
+    },
+    {
+      id: "anytime-fitness",
+      image: "/photos/fivestar-anytime-fitness.jpg",
+      width: 1268,
+      height: 2070,
+      alt: "Anthony Chapman at a 5 Star Nutrition sampling table inside Anytime Fitness, with members at the booth. Overlay: secured a 2-year partnership with one of the largest gym chains in Texas.",
+      kicker: "Partnership w/ Anytime Fitness",
+      stats: [
+        "Secured 2yr partnership with one of the largest gym chains in TX.",
+      ],
+    },
+  ],
 } as const;
