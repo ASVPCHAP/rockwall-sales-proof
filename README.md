@@ -6,10 +6,11 @@ Primary CTA: a free 20-minute [AI Opportunity Assessment](https://calendar.app.g
 
 ## What is on the page
 
-- Hero + sourced proof metrics (résumé, Upwork case entries, 2025 CoreTrust Closed/Won reports)
+- Hero + sourced proof strip and role-by-role ledger (résumé hard numbers: $160M+ pipeline, Top 1%, $23M quota, $1.5M GTV, ~60% LLM, $81.1M C/W, 89% Horizon3, 16 Rampart partners, Ashley 2× $1M, Health IQ 93%)
+- GTM automation named throughout: Outreach.io, Salesforce, Make.com, Zapier, n8n
 - CoreTrust 2025 C/W rollups (92 opportunities; YTD projected spend **$81,101,018.60**, CT expected revenue **$888,030.35**, sales-comp expected revenue **$1,235,494.83**) with quarterly charts, the source screenshots, and a conference meal-packing photo (30,000+ meals packed for overseas; next year Orlando)
 - Case studies: AgeriteCRM, **Valcore GPO** (valcoregpo.com — 20+ contracts, 33 members, still growing; Montreal offsite photo at the Royal Montreal Curling Club), private-school ops, LLM cost routing, Valstone GTM, CoreTrust PE, **Horizon3.ai** (early sales hire / TOLA GTM; company Series E cited from public press)
-- Dedicated Horizon3 chapter (Craft Ventures Series C thesis + Aug 2026 Series E links; equity held as early team, not co-founder)
+- Dedicated Horizon3 chapter with team photo (Trust But Verify), Craft thesis, Series E links; equity held as early team, not co-founder
 - Method, résumé highlights, contact
 
 No testimonials, logos, or savings figures were invented. Top 1% is stated for 2023–2024 only; 2025 is presented as the Closed/Won proof pack.
