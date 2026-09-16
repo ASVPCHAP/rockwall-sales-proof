@@ -96,6 +96,16 @@ export const coreTrustYtd = {
   note: "YTD grand totals taken from the Q4 2025 report footer (not rounded estimates). Quarterly subtotals are on each Closed/Won screenshot. Deal count matches the report’s “Anthony Chapman (92)” rollup (23 + 24 + 21 + 24).",
 } as const;
 
+export const coreTrustConference = {
+  image: "/photos/coretrust-conference-meals.jpg",
+  width: 1294,
+  height: 1017,
+  alt: "Group selfie at a CoreTrust conference meal-packing event: colleagues in blue hairnets and CoreTrust lanyards around packing bins and tables in a hotel ballroom.",
+  kicker: "Conference · community",
+  title: "30,000+ meals packed with the CoreTrust team",
+  body: "This year’s CoreTrust conference included a meal-packing event — 30,000+ meals to send overseas for the global community. Next year: Orlando.",
+} as const;
+
 /** PE parent-account names visible on the 2025 C/W screenshots. Not invented logos. */
 export const peParentsVisible = [
   "Hellman & Friedman",
