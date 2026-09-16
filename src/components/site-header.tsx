@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { nav, site } from "@/lib/site";
+import { BodyPortal } from "@/components/body-portal";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -37,7 +38,7 @@ export function SiteHeader() {
         </a>
 
         <nav
-          className="hidden items-center gap-3 xl:flex xl:gap-5"
+          className="hidden items-center gap-3 lg:flex xl:gap-5"
           aria-label="Primary"
         >
           {nav.map((item) => (
@@ -66,7 +67,7 @@ export function SiteHeader() {
             type="button"
             variant="outline"
             size="icon"
-            className="rounded-sm xl:hidden"
+            className="rounded-sm lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls={panelId}
@@ -78,44 +79,46 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div
-          className="fixed inset-0 z-50 xl:hidden"
-          id={panelId}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Site menu"
-        >
-          <button
-            type="button"
-            className="absolute inset-0 bg-black/70"
-            aria-label="Close menu"
-            onClick={() => setOpen(false)}
-          />
-          <div className="absolute inset-y-0 right-0 flex w-[min(100%,20rem)] flex-col border-l border-[var(--rule)] bg-background p-6 shadow-lg">
-            <p className="font-heading text-xl">{site.firm}</p>
-            <nav className="mt-6 flex flex-col" aria-label="Mobile">
-              {nav.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="border-b border-[var(--rule)] py-3 text-sm tracking-[0.12em] text-foreground uppercase"
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-            <a
-              href={site.calendarUrl}
-              rel="noreferrer"
-              target="_blank"
-              className="bg-primary text-primary-foreground mt-8 inline-flex h-11 items-center justify-center rounded-sm px-4 text-[0.78rem] tracking-[0.08em] uppercase"
+        <BodyPortal>
+          <div
+            className="fixed inset-0 z-[100]"
+            id={panelId}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site menu"
+          >
+            <button
+              type="button"
+              className="absolute inset-0 bg-black/70"
+              aria-label="Close menu"
               onClick={() => setOpen(false)}
-            >
-              Book assessment
-            </a>
+            />
+            <div className="absolute inset-y-0 right-0 flex w-[min(100%,20rem)] flex-col border-l border-[var(--rule)] bg-background p-6 shadow-lg">
+              <p className="font-heading text-xl">{site.firm}</p>
+              <nav className="mt-6 flex flex-col" aria-label="Mobile">
+                {nav.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="border-b border-[var(--rule)] py-3 text-sm tracking-[0.12em] text-foreground uppercase"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+              <a
+                href={site.calendarUrl}
+                rel="noreferrer"
+                target="_blank"
+                className="bg-primary text-primary-foreground mt-8 inline-flex h-11 items-center justify-center rounded-sm px-4 text-[0.78rem] tracking-[0.08em] uppercase"
+                onClick={() => setOpen(false)}
+              >
+                Book assessment
+              </a>
+            </div>
           </div>
-        </div>
+        </BodyPortal>
       ) : null}
     </header>
   );

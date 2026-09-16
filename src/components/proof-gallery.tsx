@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { BodyPortal } from "@/components/body-portal";
 import { coreTrustQuarters } from "@/lib/data";
 import { usd } from "@/lib/format";
 
@@ -74,53 +75,55 @@ export function ProofGallery() {
       </div>
 
       {active ? (
-        <div
-          className="fixed inset-0 z-[60] flex items-start justify-center overflow-auto bg-black/80 p-4 sm:p-8"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="proof-dialog-title"
-        >
-          <button
-            type="button"
-            className="absolute inset-0"
-            aria-label="Close enlarged report"
-            onClick={() => setActive(null)}
-          />
-          <div className="relative z-10 my-auto w-full max-w-6xl rounded-sm border border-[var(--rule)] bg-background shadow-lg">
-            <div className="flex items-start justify-between gap-4 border-b border-[var(--rule)] p-4 sm:p-5">
-              <div>
-                <h3 id="proof-dialog-title" className="font-heading text-xl">
-                  CoreTrust {active.label} — Closed/Won by AE
-                </h3>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Scroll horizontally on small screens. Subtotal projected spend{" "}
-                  {usd(active.projectedSpend)}; CT expected revenue{" "}
-                  {usd(active.ctExpected)}; sales-comp expected revenue{" "}
-                  {usd(active.salesComp)}.
-                </p>
+        <BodyPortal>
+          <div
+            className="fixed inset-0 z-[100] flex items-start justify-center overflow-auto bg-black/80 p-4 sm:p-8"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="proof-dialog-title"
+          >
+            <button
+              type="button"
+              className="absolute inset-0"
+              aria-label="Close enlarged report"
+              onClick={() => setActive(null)}
+            />
+            <div className="relative z-10 my-auto w-full max-w-6xl rounded-sm border border-[var(--rule)] bg-background shadow-lg">
+              <div className="flex items-start justify-between gap-4 border-b border-[var(--rule)] p-4 sm:p-5">
+                <div>
+                  <h3 id="proof-dialog-title" className="font-heading text-xl">
+                    CoreTrust {active.label} — Closed/Won by AE
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Scroll horizontally on small screens. Subtotal projected spend{" "}
+                    {usd(active.projectedSpend)}; CT expected revenue{" "}
+                    {usd(active.ctExpected)}; sales-comp expected revenue{" "}
+                    {usd(active.salesComp)}.
+                  </p>
+                </div>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  className="shrink-0 rounded-sm"
+                  onClick={() => setActive(null)}
+                  aria-label="Close"
+                >
+                  <X />
+                </Button>
               </div>
-              <Button
-                type="button"
-                variant="ghost"
-                size="icon"
-                className="shrink-0 rounded-sm"
-                onClick={() => setActive(null)}
-                aria-label="Close"
-              >
-                <X />
-              </Button>
-            </div>
-            <div className="max-h-[75svh] overflow-auto bg-[#f7f7f7] p-3">
-              <Image
-                src={active.image}
-                alt={`Full CoreTrust Closed/Won report screenshot for ${active.label}.`}
-                width={active.width}
-                height={active.height}
-                className="h-auto w-full min-w-[48rem]"
-              />
+              <div className="max-h-[75svh] overflow-auto bg-[#f7f7f7] p-3">
+                <Image
+                  src={active.image}
+                  alt={`Full CoreTrust Closed/Won report screenshot for ${active.label}.`}
+                  width={active.width}
+                  height={active.height}
+                  className="h-auto w-full min-w-[48rem]"
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </BodyPortal>
       ) : null}
     </>
   );
