@@ -1,5 +1,6 @@
+import { CultureFigure } from "@/components/culture-figure";
 import { Button } from "@/components/ui/button";
-import { horizon3, sources } from "@/lib/data";
+import { gtmTools, horizon3, sources } from "@/lib/data";
 
 export function Horizon3Section() {
   return (
@@ -12,6 +13,11 @@ export function Horizon3Section() {
         <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
           {horizon3.lede}
         </p>
+        <p className="mt-3 max-w-3xl text-sm text-muted-foreground">
+          GTM automation stack: {gtmTools.join(" · ")}.
+        </p>
+
+        <CultureFigure className="mt-10" {...horizon3.photo} />
 
         <div className="mt-12 grid gap-10 lg:grid-cols-2">
           <div>

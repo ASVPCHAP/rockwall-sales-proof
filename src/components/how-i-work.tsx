@@ -1,4 +1,4 @@
-import { method } from "@/lib/data";
+import { gtmTools, method } from "@/lib/data";
 
 export function HowIWork() {
   return (
@@ -35,7 +35,7 @@ export function HowIWork() {
             <dt className="text-[0.68rem] tracking-[0.16em] text-muted-foreground uppercase">
               Automation
             </dt>
-            <dd className="mt-2 text-sm">n8n · Make · Zapier</dd>
+            <dd className="mt-2 text-sm">{gtmTools.join(" · ")}</dd>
           </div>
           <div>
             <dt className="text-[0.68rem] tracking-[0.16em] text-muted-foreground uppercase">
@@ -50,7 +50,7 @@ export function HowIWork() {
               Motion
             </dt>
             <dd className="mt-2 text-sm">
-              Agents / bots · CRM · GTM sequencing · ops SOPs
+              Agents / bots · Outreach.io · Salesforce · GTM sequencing
             </dd>
           </div>
         </dl>

@@ -1,4 +1,4 @@
-import { liveProperties, proofMetrics, sources } from "@/lib/data";
+import { liveProperties, proofMetrics, resumeLedger, sources } from "@/lib/data";
 
 export function ProofStrip() {
   return (
@@ -14,15 +14,16 @@ export function ProofStrip() {
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
             No invented testimonials, logos, or savings percentages. Figures
             below are from the résumé, the Upwork case entries, the 2025
-            CoreTrust Closed/Won reports, and Anthony&apos;s Valcore operating
-            snapshot.
+            CoreTrust Closed/Won reports, and Anthony&apos;s Valcore snapshot.
+            Horizon3 Series E figures are the company&apos;s, not personal
+            production.
           </p>
         </div>
 
-        <ol className="mt-12 grid gap-px overflow-hidden rounded-sm bg-[var(--rule)] sm:grid-cols-2 lg:grid-cols-5">
+        <ol className="mt-12 grid gap-px overflow-hidden rounded-sm bg-[var(--rule)] sm:grid-cols-2 lg:grid-cols-4">
           {proofMetrics.map((metric, index) => (
             <li
-              key={metric.value}
+              key={metric.id}
               className="flex flex-col bg-background p-6 sm:p-7"
             >
               <span className="font-mono text-[0.65rem] tracking-[0.16em] text-[var(--brass)] uppercase">
@@ -44,9 +45,37 @@ export function ProofStrip() {
           ))}
         </ol>
 
+        <div className="mt-12 grid gap-6">
+          {resumeLedger.map((group) => (
+            <div
+              key={group.org}
+              className="rounded-sm border border-[var(--rule)] p-5 sm:p-6"
+            >
+              <p className="text-[0.68rem] tracking-[0.16em] text-[var(--brass)] uppercase">
+                {group.role}
+              </p>
+              <h3 className="font-heading mt-2 text-2xl tracking-tight">
+                {group.org}
+              </h3>
+              <dl className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+                {group.stats.map((stat) => (
+                  <div key={`${group.org}-${stat.label}`}>
+                    <dt className="font-heading text-2xl tracking-tight">
+                      {stat.value}
+                    </dt>
+                    <dd className="mt-1 text-xs leading-snug text-muted-foreground">
+                      {stat.label}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ))}
+        </div>
+
         <ol className="mt-8 space-y-1.5 text-xs leading-relaxed text-muted-foreground">
           {proofMetrics.map((metric, index) => (
-            <li key={metric.value}>
+            <li key={metric.id}>
               <span className="font-medium text-foreground/80">
                 {index + 1}.
               </span>{" "}
@@ -56,6 +85,10 @@ export function ProofStrip() {
           <li>
             <span className="font-medium text-foreground/80">Valcore.</span>{" "}
             {sources.valcore}
+          </li>
+          <li>
+            <span className="font-medium text-foreground/80">Horizon3 today.</span>{" "}
+            {sources.horizon3Press}
           </li>
         </ol>
 

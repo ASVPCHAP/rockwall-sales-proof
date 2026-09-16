@@ -11,37 +11,125 @@ export const sources = {
     "Craft Ventures, “Why we invested in Horizon3.ai” — Series C investor thesis for NodeZero / autonomous security.",
 } as const;
 
+export const gtmTools = [
+  "Outreach.io",
+  "Salesforce",
+  "Make.com",
+  "Zapier",
+  "n8n",
+] as const;
+
 export const proofMetrics = [
   {
+    id: "pipeline160",
+    value: "$160M+",
+    label: "GTV pipeline in six months at Rampart",
+    detail: "Head of BD, Jul 2026–present. IT, facilities, waste, food & beverage, and other indirect.",
+    source: "resume" as const,
+  },
+  {
+    id: "top1",
     value: "Top 1%",
     label: "of CoreTrust reps, company-wide",
     detail: "2023 and 2024. Ranking is from those years — not restated as a 2025 title.",
     source: "resume" as const,
   },
   {
+    id: "quota23",
     value: "$23M",
     label: "quarterly GTV quota at CoreTrust",
     detail: "80%+ average attainment selling sourcing contracts into PE portfolios.",
     source: "resume" as const,
   },
   {
+    id: "gtv15",
     value: "$1.5M",
     label: "monthly GTV from a zero GTM at Valstone",
     detail:
-      "Built pipeline, contracts, and ~30 new enterprise members per month. Public GPO: Valcore.",
+      "~30 new enterprise members per month. Public GPO: Valcore — 20+ contracts, 33 members, still growing.",
     source: "upwork" as const,
   },
   {
+    id: "llm60",
     value: "~60%",
     label: "LLM token-cost reduction",
-    detail: "OpenRouter / open-source routing vs. a single-provider setup, 200K+ SKUs.",
+    detail: "OpenRouter / open-source routing vs. a single-provider setup. 10–20 analyses/day, 200,000+ SKUs.",
     source: "resume" as const,
   },
   {
+    id: "cw81",
     value: "$81.1M",
     label: "2025 Closed/Won projected spend",
     detail: "92 C/W opportunities. YTD from the Q4 report footer: $81,101,018.60.",
     source: "coretrust2025" as const,
+  },
+  {
+    id: "h389",
+    value: "89%",
+    label: "attainment vs a $1M quota at Horizon3.ai",
+    detail: "One of the first sales hires. TOLA from scratch. RSA, Black Hat, DEF CON.",
+    source: "resume" as const,
+  },
+  {
+    id: "partners16",
+    value: "16",
+    label: "Rampart supplier partners",
+    detail: "~$600B aggregate spend. Five-year partnership: exclusivity, revenue share, client ownership.",
+    source: "resume" as const,
+  },
+] as const;
+
+export const resumeLedger = [
+  {
+    org: "Rampart",
+    role: "Head of BD · Jul 2026–present",
+    stats: [
+      { value: "$160M+", label: "GTV pipeline, six months" },
+      { value: "16", label: "supplier partners" },
+      { value: "~$600B", label: "aggregate partner spend" },
+      { value: "~60%", label: "LLM token-cost cut" },
+    ],
+  },
+  {
+    org: "Valstone / Valcore",
+    role: "Head of Group Purchasing / BD · Dec 2025–Jul 2026",
+    stats: [
+      { value: "$1.5M", label: "monthly GTV from zero" },
+      { value: "~30", label: "new members / month" },
+      { value: "1,800+", label: "accounts · $92M spend mapped" },
+      { value: "40% / 18%", label: "max / avg supplier savings" },
+      { value: "20+", label: "Valcore contracts" },
+      { value: "33", label: "Valcore members, still growing" },
+    ],
+  },
+  {
+    org: "CoreTrust",
+    role: "Sr AE, Private Equity · Aug 2023–Dec 2025",
+    stats: [
+      { value: "$23M", label: "quarterly GTV quota" },
+      { value: "80%+", label: "average attainment" },
+      { value: "Top 1%", label: "reps, 2023 and 2024" },
+      { value: "$81.1M", label: "2025 C/W projected spend" },
+    ],
+  },
+  {
+    org: "Horizon3.ai",
+    role: "Sr AE / New Business · Jan 2022–Sep 2023",
+    stats: [
+      { value: "89%", label: "vs $1M quota" },
+      { value: "TOLA", label: "territory from scratch" },
+      { value: "$250M", label: "company Series E, Aug 2026" },
+      { value: "$2B+", label: "company valuation (press)" },
+    ],
+  },
+  {
+    org: "Earlier",
+    role: "Ashley Furniture · Health IQ · 2018–2021",
+    stats: [
+      { value: "2× $1M", label: "writer at Ashley Furniture" },
+      { value: "93%", label: "quota at Health IQ" },
+      { value: "100+", label: "accounts / day at Health IQ" },
+    ],
   },
 ] as const;
 
@@ -199,7 +287,7 @@ export const caseStudies = [
     href: "https://ageritecrm.com",
     hrefLabel: "ageritecrm.com",
     summary:
-      "A specialty pharmacy expanding from 7 to 50 states — and from 11 toward 150 field reps — needed to train, certify, and equip the force without operations collapsing. I designed and built AgeriteCRM: onboarding, certification tracking, and day-to-day sales tooling, with automated outreach, prospecting, and real-time FDA updates so reps sell inside compliance.",
+      "A specialty pharmacy expanding from 7 to 50 states — and from 11 toward 150 field reps — needed to train, certify, and equip the force without operations collapsing. I designed and built AgeriteCRM: onboarding, certification tracking, and day-to-day sales tooling, with automated workflows in n8n, Make.com, and Zapier for email outreach, prospecting, and real-time FDA updates so reps sell inside compliance.",
     results: [
       "Rep productivity up ~60%",
       "Average rep revenue from $7K–$10K/month to $16K–$22K/month",
@@ -316,10 +404,11 @@ export const caseStudies = [
     href: "#horizon3",
     hrefLabel: "Horizon3 chapter",
     summary:
-      "Senior Account Executive / New Business Development, Jan 2022–Sep 2023. One of the first sales hires at a Series C cybersecurity company selling NodeZero. I played a foundational role building the TOLA region, established go-to-market strategy, automated GTM with the tools in that seat, and built VAR / MSSP partnerships — 89% attainment against a $1M quota. Early-team equity, still held. Not a co-founder.",
+      "Senior Account Executive / New Business Development, Jan 2022–Sep 2023. One of the first sales hires at a Series C cybersecurity company selling NodeZero. I played a foundational role building the TOLA region, established go-to-market strategy, automated GTM in Outreach.io, Salesforce, Make.com, Zapier, and n8n, and built VAR / MSSP partnerships — 89% attainment against a $1M quota. Early-team equity, still held. Not a co-founder.",
     results: [
       "89% attainment against a $1M quota",
-      "TOLA territory from scratch; GTM strategy; VAR / MSSP partnerships; GTM automation",
+      "TOLA from scratch; GTM strategy; VAR / MSSP partnerships",
+      "GTM automation: Outreach.io, Salesforce, Make.com, Zapier, n8n",
       "RSA, Black Hat, and DEF CON",
       "Early-team shares still held — remains invested in the company’s success",
     ],
@@ -327,8 +416,11 @@ export const caseStudies = [
       "New business",
       "Cybersecurity",
       "NodeZero",
-      "GTM automation",
-      "Channel (VAR / MSSP)",
+      "Outreach.io",
+      "Salesforce",
+      "Make.com",
+      "Zapier",
+      "n8n",
     ],
   },
 ] as const;
@@ -340,7 +432,7 @@ export const method = [
   },
   {
     title: "Install GTM automation that a seller would actually use",
-    body: "n8n, Make, and Zapier for the pipes. CRM, inbox, enrichment, and follow-up sequenced so the next right account is in front of you. I have carried $23M quarterly quotas. I do not build busywork bots.",
+    body: "Outreach.io, Salesforce, Make.com, Zapier, and n8n for the pipes. CRM, inbox, enrichment, and follow-up sequenced so the next right account is in front of you. I have carried $23M quarterly quotas. I do not build busywork bots.",
   },
   {
     title: "Run models like an operator",
@@ -358,6 +450,11 @@ export const experience = [
       "Built a 16-partner supplier network representing ~$600B in aggregate spend; negotiated a five-year partnership covering exclusivity, revenue share, and client ownership.",
       "Runs live member savings analyses for C-suite and Procurement. LLM routing (OpenRouter and others) on 10–20 analyses/day across 200,000+ SKUs, cutting token costs ~60% vs. a single provider.",
     ],
+    stats: [
+      { value: "$160M+", label: "GTV pipeline, six months" },
+      { value: "16", label: "partners · ~$600B spend" },
+      { value: "~60%", label: "LLM token-cost cut" },
+    ],
   },
   {
     org: "Rockwall Partners",
@@ -365,8 +462,8 @@ export const experience = [
     dates: "Feb 2025 — Present (concurrent) · Dallas–Fort Worth",
     points: [
       "AI operating-partner consultancy for owner-operated small and mid-size businesses — GTM, operations, and back-office systems.",
-      "Client automations in n8n / Make / Zapier, integrating field-service and back-office tools.",
-      "Hands-on OpenRouter customer for internal tooling and client-facing AI systems.",
+      "Client automations in n8n, Make.com, and Zapier, integrating field-service and back-office tools. GTM stack also includes Outreach.io and Salesforce.",
+      "Hands-on OpenRouter customer for internal tooling and client-facing AI systems — model-cost management, not slideware.",
     ],
   },
   {
@@ -379,6 +476,11 @@ export const experience = [
       "Directed analysis of 1,800+ target accounts representing $92M in addressable spend.",
       "Negotiated supplier agreements delivering up to 40% savings and an 18% average across MRO, logistics, IT, and indirect.",
     ],
+    stats: [
+      { value: "$1.5M", label: "monthly GTV from zero" },
+      { value: "~30", label: "new members / month" },
+      { value: "20+ / 33", label: "Valcore contracts / members" },
+    ],
   },
   {
     org: "CoreTrust",
@@ -389,6 +491,11 @@ export const experience = [
       "Closed and expanded relationships with Hellman & Friedman, General Atlantic, Sun Capital, Macquarie, and Providence.",
       "Landed contracts with FedEx, CDW, Dell, Geodis, and American Express. Deployed self-hosted open-source LLMs so PE customer data never routed through third-party model providers.",
     ],
+    stats: [
+      { value: "$23M", label: "quarterly GTV quota" },
+      { value: "80%+", label: "average attainment" },
+      { value: "Top 1%", label: "2023 and 2024" },
+    ],
   },
   {
     org: "Horizon3.ai",
@@ -398,9 +505,28 @@ export const experience = [
     hrefLabel: "Horizon3 chapter",
     points: [
       "One of the first sales hires at a Series C cybersecurity company; evangelized NodeZero into a market of entrenched incumbents.",
-      "Foundational TOLA build-out from scratch: GTM strategy, VAR / MSSP partnerships, and GTM automation.",
+      "Foundational TOLA build-out from scratch: GTM strategy, VAR / MSSP partnerships, and GTM automation in Outreach.io, Salesforce, Make.com, Zapier, and n8n.",
       "89% attainment against a $1M quota via cold outreach, LinkedIn, and presence at RSA, Black Hat, and DEF CON.",
       "Received shares as an early team member; still holds that equity and remains invested in the company’s success — not a co-founder.",
+    ],
+    stats: [
+      { value: "89%", label: "vs $1M quota" },
+      { value: "TOLA", label: "from scratch" },
+    ],
+  },
+  {
+    org: "Ashley Furniture · Health IQ · earlier roles",
+    role: "Prior sales and account management",
+    dates: "2018 — 2021",
+    points: [
+      "Full-cycle B2B and B2C across healthcare, insurance, retail, and commercial furnishings.",
+      "Two-time $1M writer at Ashley Furniture HomeStores.",
+      "93% quota attainment at Health IQ, prospecting 100+ accounts daily.",
+    ],
+    stats: [
+      { value: "2× $1M", label: "Ashley Furniture" },
+      { value: "93%", label: "Health IQ quota" },
+      { value: "100+", label: "accounts / day" },
     ],
   },
 ] as const;
@@ -417,7 +543,7 @@ export const horizon3 = {
   contribution: [
     "Foundational role building out the TOLA region from scratch.",
     "Established go-to-market strategy and VAR / MSSP partnerships.",
-    "Automated GTM using the tools in that early sales seat.",
+    "Automated GTM in Outreach.io, Salesforce, Make.com, Zapier, and n8n.",
     "89% attainment against a $1M quota; RSA, Black Hat, and DEF CON.",
   ],
   bridge:
@@ -456,4 +582,13 @@ export const horizon3 = {
       detail: "Independent write-up of the same round. Figures on this page follow the company release.",
     },
   ],
+  photo: {
+    image: "/photos/horizon3-team.webp",
+    width: 1100,
+    height: 619,
+    alt: "Horizon3.ai team photo: colleagues standing together under a HORIZON3.ai Trust But Verify screen.",
+    kicker: "Team · Trust but verify",
+    title: "The Horizon3.ai team",
+    body: "Early sales hire on a Series C NodeZero team — not a co-founder. TOLA GTM was automated in Outreach.io, Salesforce, Make.com, Zapier, and n8n. Still holds early-team shares.",
+  },
 } as const;

@@ -49,6 +49,20 @@ export function About() {
                   {job.hrefLabel} →
                 </a>
               ) : null}
+              {"stats" in job && job.stats ? (
+                <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {job.stats.map((stat) => (
+                    <div key={stat.label}>
+                      <dt className="font-heading text-2xl tracking-tight">
+                        {stat.value}
+                      </dt>
+                      <dd className="text-xs leading-snug text-muted-foreground">
+                        {stat.label}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              ) : null}
               <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
                 {job.points.map((point) => (
                   <li key={point}>{point}</li>
