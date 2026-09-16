@@ -12,8 +12,9 @@ export function CaseStudies() {
           Work in the operator&apos;s own numbers.
         </h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-          Live products first — AgeriteCRM and Valcore GPO — then ops rebuilds,
-          LLM cost control, the Valstone GTM behind Valcore, PE enterprise
+          Live products first — AgeriteCRM and Valcore GPO — then the Rampart
+          white-label GPO (advisor, 1099), ops rebuilds, LLM cost control
+          (Rockwall × Rampart), the Valstone GTM behind Valcore, PE enterprise
           sales, and Horizon3.ai (TOLA / Series C GTM). Results are copied from
           those sources, not dressed up.
         </p>

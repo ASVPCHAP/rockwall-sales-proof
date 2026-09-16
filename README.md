@@ -6,10 +6,11 @@ Primary CTA: a free 20-minute [AI Opportunity Assessment](https://calendar.app.g
 
 ## What is on the page
 
-- Hero + sourced proof strip and role-by-role ledger (résumé hard numbers: $160M+ pipeline, Top 1%, $23M quota, $1.5M GTV, ~60% LLM, $81.1M C/W, 89% Horizon3, 16 Rampart partners, Ashley 2× $1M, Health IQ 93%, 5 Star Nutrition 3 locations / $30k→$120k monthly run-rate / ~$690k year)
+- Hero + sourced proof strip and role-by-role ledger (56 Rampart contracts / $100M+ spend, Top 1%, $23M quota, $1.5M Valstone GTV, ~60% LLM via Rockwall × Rampart, $81.1M C/W, 89% Horizon3, Ashley 2× $1M, Health IQ 93%, 5 Star Nutrition 3 locations / $30k→$120k monthly run-rate / ~$690k year)
 - GTM automation named throughout: Outreach.io, Salesforce, Make.com, Zapier, n8n
 - CoreTrust 2025 C/W rollups (92 opportunities; YTD projected spend **$81,101,018.60**, CT expected revenue **$888,030.35**, sales-comp expected revenue **$1,235,494.83**) with quarterly charts, the source screenshots, and a conference meal-packing photo (30,000+ meals packed for overseas; next year Orlando)
-- Case studies: AgeriteCRM, **Valcore GPO** (valcoregpo.com — 20+ contracts, 33 members, still growing; Montreal offsite photo at the Royal Montreal Curling Club), private-school ops, LLM cost routing, Valstone GTM, CoreTrust PE, **Horizon3.ai** (early sales hire / TOLA GTM; company Series E cited from public press)
+- Case studies: AgeriteCRM, **Valcore GPO** (valcoregpo.com — 20+ contracts, 33 members, still growing; Montreal offsite photo at the Royal Montreal Curling Club), **Rampart** white-label GPO (advisor 1099; 56 contracts / $100M+ spend; present in Canada), private-school ops, LLM cost routing (Rockwall × Rampart), Valstone GTM, CoreTrust PE, **Horizon3.ai** (early sales hire / TOLA GTM; company Series E cited from public press)
+- Dedicated **Rampart** chapter: Valstone → Valcore → Rampart lineage; 1099 advisor for sales and supplier sourcing (not W-2 Head of BD, not ownership); Rockwall = LLM analytics + recruitment-platform partnerships
 - Dedicated Horizon3 chapter with team photo (Trust But Verify), Craft thesis, Series E links; equity held as early team, not co-founder
 - Foundations chapter: **5 Star Nutrition** Regional Sales Manager (2018–2021) — Sherman / Oklahoma / Cattle Mills, Texas; monthly run-rate $30k → $120k in six months; year finish ~$690k; WTAMU opener / Tornado Alley CrossFit / Anytime Fitness field photos with overlay stats; Facebook, SEO, local outreach, field work (not AI)
 - Method, résumé highlights, contact
@@ -65,7 +66,8 @@ Upload `out/` to Cloudflare Pages, Netlify, S3, etc.
 
 ## Content sources (do not invent)
 
-- Résumé PDF (roles: Rampart, Rockwall Partners, Valstone, CoreTrust, Horizon3.ai, plus prior sales 2018–2021)
+- Résumé PDF (roles: Rockwall Partners, Valstone, CoreTrust, Horizon3.ai, plus prior sales 2018–2021). Rampart on the résumé as Head of BD is superseded on this site by Anthony’s later framing: 1099 advisor, sales & supplier sourcing.
+- Rampart Corporation (his words): white-label GPO; 56 contracts and over $100 million in spend; present in Canada; helped launch Valcore at Valstone; Rockwall Partners separately provides LLM analytics and recruitment-platform partnerships. Not ownership.
 - 5 Star Nutrition operating facts and field-photo overlays (three locations; monthly run-rate $30k → $120k in six months; ~$690k year finish; WTAMU / Tornado Alley / Anytime Fitness; Facebook / SEO / field work — not AI)
 - Five Upwork markdown case entries, plus the Valcore GPO operating snapshot (20+ contracts, 33 members, still growing)
 - CoreTrust Closed/Won screenshots in `public/proof/` (Q1–Q4 2025)

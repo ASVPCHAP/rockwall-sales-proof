@@ -6,6 +6,7 @@ import { Hero } from "@/components/hero";
 import { FoundationsSection } from "@/components/foundations-section";
 import { Horizon3Section } from "@/components/horizon3-section";
 import { HowIWork } from "@/components/how-i-work";
+import { RampartSection } from "@/components/rampart-section";
 import { ProofStrip } from "@/components/proof-strip";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -25,6 +26,7 @@ export default function Home() {
         <ProofStrip />
         <CoreTrustProof />
         <CaseStudies />
+        <RampartSection />
         <HowIWork />
         <Horizon3Section />
         <FoundationsSection />

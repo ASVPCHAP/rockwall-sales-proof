@@ -39,6 +39,8 @@ export const metadata: Metadata = {
     "Rockwall Partners",
     "Valcore",
     "Valstone",
+    "Rampart",
+    "white-label GPO",
     "Horizon3",
     "NodeZero",
     "GTM automation",

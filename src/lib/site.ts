@@ -19,6 +19,7 @@ export const nav = [
   { href: "#proof", label: "Proof" },
   { href: "#coretrust", label: "CoreTrust" },
   { href: "#work", label: "Work" },
+  { href: "#rampart", label: "Rampart" },
   { href: "#horizon3", label: "Horizon3" },
   { href: "#foundations", label: "Foundations" },
   { href: "#method", label: "How I work" },

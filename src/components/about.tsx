@@ -12,9 +12,11 @@ export function About() {
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
             Ten-plus years closing multi-stakeholder deals from $1M to $23M+ in
-            quota. Most recently building and scaling a $160M+ GTV pipeline for
-            a B2B procurement platform. The AI work is not adjacent — it is how
-            the analytics and GTM systems actually run.
+            quota. Advisor (1099) to Rampart Corporation, a white-label GPO — 56
+            contracts and over $100 million in spend, also present in Canada.
+            Rockwall Partners is the AI operating-partner seat: LLMs and
+            recruitment-platform partnerships for Rampart, separate from that
+            advisor role.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
             Based in {site.location} ({site.timezone}). Experienced selling fully

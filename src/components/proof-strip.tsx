@@ -14,7 +14,8 @@ export function ProofStrip() {
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
             No invented testimonials, logos, or savings percentages. Figures
             below are from the résumé, the Upwork case entries, the 2025
-            CoreTrust Closed/Won reports, and Anthony&apos;s Valcore snapshot.
+            CoreTrust Closed/Won reports, Anthony&apos;s Valcore snapshot, and
+            his Rampart framing (56 contracts / $100M+ spend, advisor 1099).
             Horizon3 Series E figures are the company&apos;s, not personal
             production.
           </p>
@@ -93,6 +94,10 @@ export function ProofStrip() {
           <li>
             <span className="font-medium text-foreground/80">5 Star Nutrition.</span>{" "}
             {sources.fiveStar}
+          </li>
+          <li>
+            <span className="font-medium text-foreground/80">Rampart.</span>{" "}
+            {sources.rampart}
           </li>
         </ol>
 

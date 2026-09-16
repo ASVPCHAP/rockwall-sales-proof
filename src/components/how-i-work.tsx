@@ -10,8 +10,10 @@ export function HowIWork() {
         </h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
           Rockwall Partners is the AI operating partner: I sit in the motion,
-          wire the system, and stay close to cost. The tools are ordinary. The
-          judgment is from a decade of carrying quota.
+          wire the system, and stay close to cost. For Rampart that means LLM
+          analytics and recruitment-platform partnerships — a different seat
+          from the 1099 advisor role on sales and sourcing. The tools are
+          ordinary. The judgment is from a decade of carrying quota.
         </p>
 
         <ol className="mt-12 grid gap-px overflow-hidden rounded-sm bg-[var(--rule)] lg:grid-cols-3">

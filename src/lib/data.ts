@@ -11,6 +11,8 @@ export const sources = {
     "Craft Ventures, “Why we invested in Horizon3.ai” — Series C investor thesis for NodeZero / autonomous security.",
   fiveStar:
     "Anthony Chapman — 5 Star Nutrition, Regional Sales Manager (prior sales 2018–2021), plus overlay text on his field photos: three locations (Sherman; Oklahoma; Cattle Mills, Texas); West Texas monthly run-rate $30k → $120k in six months; year finish around $690,000. WTAMU opener: 500+ products, gym/university prospecting, YOY 25–50%. Tornado Alley CrossFit: 2-year deal, 150+ members signed, +50 members grown. Anytime Fitness: 2-year partnership, one of the largest gym chains in TX. Grand Opening #3 (Sherman, TX): construction buildout, hiring/training, local outreach. Motions: Facebook, SEO, local outreach, field work — not AI.",
+  rampart:
+    "Anthony Chapman — Rampart Corporation framing: white-label GPO; 56 contracts and over $100 million in spend; also present in Canada; Rampart helped launch Valcore at Valstone; after Valstone, a 1099 advisor partnership for sales and supplier sourcing. Rockwall Partners (separate) helps Rampart with LLMs and recruitment-platform partnerships. Not ownership; not W-2 Head of BD.",
 } as const;
 
 export const gtmTools = [
@@ -23,11 +25,19 @@ export const gtmTools = [
 
 export const proofMetrics = [
   {
-    id: "pipeline160",
-    value: "$160M+",
-    label: "GTV pipeline in six months at Rampart",
-    detail: "Head of BD, Jul 2026–present. IT, facilities, waste, food & beverage, and other indirect.",
-    source: "resume" as const,
+    id: "contracts56",
+    value: "56",
+    label: "contracts on the Rampart white-label GPO",
+    detail:
+      "Current Rampart scale, in his words. Advisor (1099) on sales and supplier sourcing — not a W-2 Head of BD title, not ownership.",
+    source: "rampart" as const,
+  },
+  {
+    id: "spend100",
+    value: "$100M+",
+    label: "spend on the Rampart book",
+    detail: "Over $100 million in spend. Rampart is also present in Canada.",
+    source: "rampart" as const,
   },
   {
     id: "top1",
@@ -48,14 +58,15 @@ export const proofMetrics = [
     value: "$1.5M",
     label: "monthly GTV from a zero GTM at Valstone",
     detail:
-      "~30 new enterprise members per month. Public GPO: Valcore — 20+ contracts, 33 members, still growing.",
+      "~30 new enterprise members per month. Public GPO: Valcore — 20+ contracts, 33 members, still growing. Rampart helped launch Valcore.",
     source: "upwork" as const,
   },
   {
     id: "llm60",
     value: "~60%",
     label: "LLM token-cost reduction",
-    detail: "OpenRouter / open-source routing vs. a single-provider setup. 10–20 analyses/day, 200,000+ SKUs.",
+    detail:
+      "Rockwall Partners × Rampart — OpenRouter / open-source routing vs. a single-provider setup. 10–20 analyses/day, 200,000+ SKUs. Distinct from the 1099 advisor seat.",
     source: "resume" as const,
   },
   {
@@ -72,25 +83,16 @@ export const proofMetrics = [
     detail: "One of the first sales hires. TOLA from scratch. RSA, Black Hat, DEF CON.",
     source: "resume" as const,
   },
-  {
-    id: "partners16",
-    value: "16",
-    label: "Rampart supplier partners",
-    detail: "~$600B aggregate spend. Five-year partnership: exclusivity, revenue share, client ownership.",
-    source: "resume" as const,
-  },
 ] as const;
 
 export const resumeLedger = [
   {
     org: "Rampart",
-    role: "Head of BD · Jul 2026–present",
+    role: "Advisor (1099) · sales & supplier sourcing · Jul 2026–present",
     stats: [
-      { value: "$160M+", label: "GTV pipeline, six months" },
-      { value: "16", label: "supplier partners" },
-      { value: "~$600B", label: "aggregate partner spend" },
-      { value: "5-yr", label: "partnership (excl. / rev share)" },
-      { value: "~60%", label: "LLM token-cost cut" },
+      { value: "56", label: "contracts" },
+      { value: "$100M+", label: "in spend" },
+      { value: "Canada", label: "also present" },
     ],
   },
   {
@@ -99,6 +101,8 @@ export const resumeLedger = [
     stats: [
       { value: "n8n / Make / Zapier", label: "SMB automation installs" },
       { value: "OpenRouter", label: "model-cost management" },
+      { value: "LLMs", label: "Rampart analytics (Rockwall seat)" },
+      { value: "Recruiting", label: "platform partnerships for Rampart" },
     ],
   },
   {
@@ -271,7 +275,7 @@ export const liveProperties = [
     name: "Valcore GPO",
     href: "https://valcoregpo.com/",
     hrefLabel: "valcoregpo.com",
-    note: "Public face of the Valstone GPO. 20+ contracts. 33 members. Still growing.",
+    note: "Public face of the Valstone GPO. Rampart helped launch Valcore. 20+ contracts. 33 members. Still growing.",
   },
 ] as const;
 
@@ -322,9 +326,31 @@ export const caseStudies = [
     href: "https://valcoregpo.com/",
     hrefLabel: "valcoregpo.com",
     summary:
-      "Under Valstone, I helped stand up an entire group purchasing organization in under a year — no existing GTM, pipeline, or contract book. Valcore is the public face of that GPO: group purchasing power for growing companies, from a spend file to GPO-negotiated pricing. It is the live member brand for the same from-zero motion that scaled to $1.5M monthly GTV.",
+      "Under Valstone, I helped stand up an entire group purchasing organization in under a year — no existing GTM, pipeline, or contract book. Valcore is the public face of that GPO: group purchasing power for growing companies, from a spend file to GPO-negotiated pricing. It is the live member brand for the same from-zero motion that scaled to $1.5M monthly GTV. Rampart helped launch the Valcore initiative at Valstone; the white-label GPO lineage continues on the Rampart chapter.",
     results: ["20+ contracts", "33 members", "Still growing"],
-    tags: ["GPO", "B2B procurement", "Go-to-market", "Valstone"],
+    tags: ["GPO", "B2B procurement", "Go-to-market", "Valstone", "Rampart"],
+  },
+  {
+    slug: "rampart-gpo",
+    kicker: "White-label GPO · advisor (1099)",
+    title: "Rampart Corporation — 56 contracts, $100M+ spend",
+    href: "#rampart",
+    hrefLabel: "Rampart chapter",
+    summary:
+      "Rampart is building a new type of GPO: a white-label GPO, also present in Canada. After Valstone, we formed a partnership early for Rampart to take over sales and supplier sourcing. I serve as an advisor in that role (1099) — not an employee, and I do not claim to own Rampart. Rockwall Partners, separately, helps Rampart sharpen analytics through large language models and new partnerships with recruitment platforms.",
+    results: [
+      "56 contracts",
+      "Over $100 million in spend",
+      "Present in Canada",
+      "Helped launch Valcore at Valstone",
+    ],
+    tags: [
+      "White-label GPO",
+      "Advisor (1099)",
+      "Supplier sourcing",
+      "Canada",
+      "Valcore",
+    ],
   },
   {
     slug: "private-school-ops",
@@ -349,23 +375,25 @@ export const caseStudies = [
   },
   {
     slug: "llm-cost-routing",
-    kicker: "LLM ops · production routing",
+    kicker: "Rockwall × Rampart · LLM ops",
     title: "Cut LLM costs ~60% while analyzing 200,000+ SKUs daily",
-    href: null,
-    hrefLabel: null,
+    href: "#rampart",
+    hrefLabel: "Rampart chapter",
     summary:
-      "As Head of Business Development at Rampart and AI Operator at Rockwall Partners, I run the model layer behind high-volume analytics — 10–20 analyses per day across 200,000+ SKUs. Traffic is routed through OpenRouter and related tools so open-source models are selected by cost and task fit, for internal tooling and client-facing systems.",
+      "Through Rockwall Partners — not the 1099 advisor seat — I help Rampart sharpen analytical capabilities with large language models. The model layer behind high-volume analytics runs 10–20 analyses per day across 200,000+ SKUs. Traffic is routed through OpenRouter and related tools so open-source models are selected by cost and task fit. Rockwall also helps create new partnerships with recruitment platforms.",
     results: [
       "~60% reduction in token costs vs. a single-provider setup",
       "Sustained 10–20 runs/day on 200K+ SKUs without cost scaling linearly",
       "Hands-on OpenRouter deployment in production — not a slide-deck architecture",
+      "Recruitment-platform partnerships for Rampart, distinct from the advisor role",
     ],
     tags: [
       "OpenRouter",
       "LLM routing",
       "Cost optimization",
       "Open-source models",
-      "AI agents",
+      "Rockwall Partners",
+      "Rampart",
     ],
   },
   {
@@ -457,18 +485,19 @@ export const method = [
 export const experience = [
   {
     org: "Rampart Corporation",
-    role: "Head of Business Development",
+    role: "Advisor — sales & supplier sourcing (1099)",
     dates: "Jul 2026 — Present · Dallas",
+    href: "#rampart",
+    hrefLabel: "Rampart chapter",
     points: [
-      "Built a $160M+ GTV pipeline in six months across IT, facilities, waste, food & beverage, and other indirect categories.",
-      "Built a 16-partner supplier network representing ~$600B in aggregate spend; negotiated a five-year partnership covering exclusivity, revenue share, and client ownership.",
-      "Runs live member savings analyses for C-suite and Procurement. LLM routing (OpenRouter and others) on 10–20 analyses/day across 200,000+ SKUs, cutting token costs ~60% vs. a single provider.",
+      "White-label GPO. After Valstone, a partnership for Rampart to take over sales and supplier sourcing. Advisor (1099) — not an employee, and not a claim of ownership.",
+      "Current Rampart scale: 56 contracts and over $100 million in spend. Also present in Canada.",
+      "Rampart helped launch the Valcore initiative at Valstone (valcoregpo.com).",
     ],
     stats: [
-      { value: "$160M+", label: "GTV pipeline, six months" },
-      { value: "16", label: "partners · ~$600B spend" },
-      { value: "5-yr", label: "excl. / rev share / ownership" },
-      { value: "~60%", label: "LLM token-cost cut" },
+      { value: "56", label: "contracts" },
+      { value: "$100M+", label: "in spend" },
+      { value: "1099", label: "advisor, not W-2" },
     ],
   },
   {
@@ -479,10 +508,12 @@ export const experience = [
       "AI operating-partner consultancy for owner-operated small and mid-size businesses — GTM, operations, and back-office systems.",
       "Client automations in n8n, Make.com, and Zapier, integrating field-service and back-office tools. GTM stack also includes Outreach.io and Salesforce.",
       "Hands-on OpenRouter customer for internal tooling and client-facing AI systems — model-cost management, not slideware.",
+      "Helps Rampart sharpen analytics through large language models and by creating new partnerships with recruitment platforms — distinct from the 1099 advisor seat.",
     ],
     stats: [
       { value: "n8n / Make / Zapier", label: "SMB automation installs" },
       { value: "OpenRouter", label: "model-cost management" },
+      { value: "LLMs", label: "Rampart analytics" },
     ],
   },
   {
@@ -491,7 +522,7 @@ export const experience = [
     dates: "Dec 2025 — Jul 2026 · Dallas",
     points: [
       "Launched a B2B procurement platform from zero: GTM, pipeline, and contracts to $1.5M monthly GTV and ~30 new enterprise members per month.",
-      "Helped stand up the public GPO — Valcore (valcoregpo.com) — in under a year: 20+ contracts, 33 members, still growing.",
+      "Helped stand up the public GPO — Valcore (valcoregpo.com) — in under a year: 20+ contracts, 33 members, still growing. Rampart helped launch that Valcore initiative.",
       "Directed analysis of 1,800+ target accounts representing $92M in addressable spend.",
       "Negotiated supplier agreements delivering up to 40% savings and an 18% average across MRO, logistics, IT, and indirect.",
     ],
@@ -732,4 +763,60 @@ export const fiveStarNutrition = {
       ],
     },
   ],
+} as const;
+
+export const rampart = {
+  kicker: "Rampart Corporation · Advisor (1099)",
+  title: "A white-label GPO. Sales and sourcing — not a W-2 seat.",
+  lede: "Rampart Corporation is building a new type of GPO: a white-label GPO, also present in Canada. After Valstone, we formed a partnership early for Rampart to take over sales and supplier sourcing. I serve as an advisor in this role (1099). I do not claim to own Rampart.",
+  lineage: [
+    {
+      org: "Valstone",
+      note: "Head of Group Purchasing / BD, Dec 2025–Jul 2026. From-zero GTM to $1.5M monthly GTV.",
+      href: "#work",
+    },
+    {
+      org: "Valcore",
+      note: "Public Valstone GPO. Rampart helped launch this initiative.",
+      href: "https://valcoregpo.com/",
+    },
+    {
+      org: "Rampart",
+      note: "White-label GPO. Advisor, 1099. Sales and supplier sourcing. Present in Canada.",
+      href: "#rampart",
+    },
+  ],
+  stats: [
+    {
+      value: "56",
+      label: "contracts",
+      detail: "Current Rampart scale, in his words.",
+    },
+    {
+      value: "$100M+",
+      label: "in spend",
+      detail: "Over $100 million in spend on the book.",
+    },
+    {
+      value: "Canada",
+      label: "also present",
+      detail: "Operating / present in Canada. No office details beyond that.",
+    },
+  ],
+  contribution: [
+    "After Valstone ended, a partnership for Rampart to take over sales and supplier sourcing.",
+    "Advisor (1099) — hands-on GTM and supplier work under that umbrella, not employment.",
+    "Rampart helped launch the Valcore initiative at Valstone.",
+  ],
+  rockwall: {
+    kicker: "Rockwall × Rampart — separate from the 1099 seat",
+    title: "LLM analytics and recruitment-platform partnerships.",
+    body: "Rockwall Partners helps Rampart sharpen analytical capabilities through large language models, and by creating new partnerships with recruitment platforms. That is AI operating-partner work — distinct from the 1099 advisor role.",
+    stats: [
+      { value: "~60%", label: "token-cost cut vs a single provider" },
+      { value: "200k+", label: "SKUs · 10–20 analyses/day" },
+    ],
+  },
+  resumeNote:
+    "The résumé also listed a $160M+ GTV pipeline in six months, a 16-partner supplier network (~$600B aggregate spend), and a five-year supplier partnership covering exclusivity, revenue share, and client ownership. Those are partnership outcomes on sales and sourcing — not a restatement of W-2 Head of BD, and not a claim of owning Rampart. Primary Rampart proof on this page is 56 contracts and over $100 million in spend.",
 } as const;
