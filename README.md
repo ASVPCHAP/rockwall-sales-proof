@@ -8,7 +8,7 @@ Primary CTA: a free 20-minute [AI Opportunity Assessment](https://calendar.app.g
 
 - Hero + sourced proof metrics (résumé, Upwork case entries, 2025 CoreTrust Closed/Won reports)
 - CoreTrust 2025 C/W rollups (92 opportunities; YTD projected spend **$81,101,018.60**, CT expected revenue **$888,030.35**, sales-comp expected revenue **$1,235,494.83**) with quarterly charts, the source screenshots, and a conference meal-packing photo (30,000+ meals packed for overseas; next year Orlando)
-- Case studies: AgeriteCRM, **Valcore GPO** (valcoregpo.com — 20+ contracts, 33 members, still growing), private-school ops, LLM cost routing, Valstone GTM, CoreTrust PE
+- Case studies: AgeriteCRM, **Valcore GPO** (valcoregpo.com — 20+ contracts, 33 members, still growing; Montreal offsite photo at the Royal Montreal Curling Club), private-school ops, LLM cost routing, Valstone GTM, CoreTrust PE
 - Method, résumé highlights, contact
 
 No testimonials, logos, or savings figures were invented. Top 1% is stated for 2023–2024 only; 2025 is presented as the Closed/Won proof pack.

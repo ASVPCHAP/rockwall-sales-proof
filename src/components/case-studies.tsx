@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { caseStudies } from "@/lib/data";
+import { CultureFigure } from "@/components/culture-figure";
+import { caseStudies, valcoreOffsite } from "@/lib/data";
 
 export function CaseStudies() {
   return (
@@ -19,7 +20,7 @@ export function CaseStudies() {
 
         <div className="mt-12 grid gap-5">
           {caseStudies.map((study, index) => (
-            <article key={study.slug} id={study.slug}>
+            <article key={study.slug} id={study.slug} className="grid gap-5">
               <Card className="rounded-sm bg-transparent py-0 ring-[var(--rule)]">
                 <CardHeader className="border-b border-[var(--rule)] py-6">
                   <p className="text-[0.68rem] tracking-[0.16em] text-[var(--brass)] uppercase">
@@ -71,6 +72,9 @@ export function CaseStudies() {
                   </div>
                 </CardContent>
               </Card>
+              {study.slug === "valcore-gpo" ? (
+                <CultureFigure {...valcoreOffsite} />
+              ) : null}
             </article>
           ))}
         </div>

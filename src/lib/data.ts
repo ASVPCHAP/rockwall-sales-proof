@@ -169,6 +169,16 @@ export const liveProperties = [
   },
 ] as const;
 
+export const valcoreOffsite = {
+  image: "/photos/valcore-montreal-curling.jpg",
+  width: 1281,
+  height: 912,
+  alt: "Valstone/Valcore team at Royal Montreal Curling Club: operators and Valstone colleagues on the ice with curling stones and brooms, club crest (founded 1807) in the foreground.",
+  kicker: "Valstone DBA Valcore · Montreal",
+  title: "Operators and Valstone, on the ice",
+  body: "We brought operators and the Valstone team together in Montreal to review last year’s results and kick off the year ahead — then a friendly competition (questionable technique included) at the Royal Montreal Curling Club, founded 1807.",
+} as const;
+
 export const supplierContractsNamed = [
   "FedEx",
   "CDW",

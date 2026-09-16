@@ -1,6 +1,5 @@
-import Image from "next/image";
-
 import { Badge } from "@/components/ui/badge";
+import { CultureFigure } from "@/components/culture-figure";
 import { ProofGallery } from "@/components/proof-gallery";
 import {
   categoryBreadth,
@@ -91,27 +90,7 @@ export function CoreTrustProof() {
           </p>
         </div>
 
-        <figure className="mt-12 overflow-hidden rounded-sm border border-[var(--rule)] lg:grid lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.95fr)]">
-          <Image
-            src={coreTrustConference.image}
-            alt={coreTrustConference.alt}
-            width={coreTrustConference.width}
-            height={coreTrustConference.height}
-            className="h-auto w-full"
-            sizes="(min-width: 1024px) 42rem, 100vw"
-          />
-          <figcaption className="flex flex-col justify-center border-t border-[var(--rule)] p-6 sm:p-8 lg:border-t-0 lg:border-l">
-            <p className="text-[0.7rem] tracking-[0.16em] text-[var(--brass)] uppercase">
-              {coreTrustConference.kicker}
-            </p>
-            <h3 className="font-heading mt-3 text-2xl tracking-tight sm:text-3xl">
-              {coreTrustConference.title}
-            </h3>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              {coreTrustConference.body}
-            </p>
-          </figcaption>
-        </figure>
+        <CultureFigure className="mt-12" {...coreTrustConference} />
 
         <div className="mt-12">
           <h3 className="font-heading text-2xl">PE parent accounts on the book</h3>
