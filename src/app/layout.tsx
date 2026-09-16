@@ -37,6 +37,8 @@ export const metadata: Metadata = {
   keywords: [
     "Anthony Chapman",
     "Rockwall Partners",
+    "Valcore",
+    "Valstone",
     "AI operating partner",
     "GTM automation",
     "enterprise sales",

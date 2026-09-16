@@ -3,6 +3,8 @@ export const sources = {
   upwork: "Upwork portfolio case-study entries provided for this site.",
   coretrust2025:
     "CoreTrust report: Opportunities — Current Year — C/W by AE. Fiscal 2025 quarterly Closed/Won subtotals and Q4 YTD grand totals.",
+  valcore:
+    "Operating snapshot stated by Anthony Chapman for Valcore GPO (the public Valstone GPO): 20+ contracts, 33 members, still growing.",
 } as const;
 
 export const proofMetrics = [
@@ -21,7 +23,8 @@ export const proofMetrics = [
   {
     value: "$1.5M",
     label: "monthly GTV from a zero GTM at Valstone",
-    detail: "Built pipeline, contracts, and ~30 new enterprise members per month.",
+    detail:
+      "Built pipeline, contracts, and ~30 new enterprise members per month. Public GPO: Valcore.",
     source: "upwork" as const,
   },
   {
@@ -141,6 +144,21 @@ export const categoryBreadth = [
   "Network Integration",
 ] as const;
 
+export const liveProperties = [
+  {
+    name: "AgeriteCRM",
+    href: "https://ageritecrm.com",
+    hrefLabel: "ageritecrm.com",
+    note: "Field CRM for a scaling specialty-pharmacy sales force.",
+  },
+  {
+    name: "Valcore GPO",
+    href: "https://valcoregpo.com/",
+    hrefLabel: "valcoregpo.com",
+    note: "Public face of the Valstone GPO. 20+ contracts. 33 members. Still growing.",
+  },
+] as const;
+
 export const supplierContractsNamed = [
   "FedEx",
   "CDW",
@@ -170,6 +188,17 @@ export const caseStudies = [
       "n8n / Make / Zapier",
       "Regulatory tooling",
     ],
+  },
+  {
+    slug: "valcore-gpo",
+    kicker: "Valstone · group purchasing",
+    title: "Valcore GPO: stood up an entire GPO in under a year",
+    href: "https://valcoregpo.com/",
+    hrefLabel: "valcoregpo.com",
+    summary:
+      "Under Valstone, I helped stand up an entire group purchasing organization in under a year — no existing GTM, pipeline, or contract book. Valcore is the public face of that GPO: group purchasing power for growing companies, from a spend file to GPO-negotiated pricing. It is the live member brand for the same from-zero motion that scaled to $1.5M monthly GTV.",
+    results: ["20+ contracts", "33 members", "Still growing"],
+    tags: ["GPO", "B2B procurement", "Go-to-market", "Valstone"],
   },
   {
     slug: "private-school-ops",
@@ -217,10 +246,10 @@ export const caseStudies = [
     slug: "valstone-gtm",
     kicker: "Build-from-zero GTM · B2B procurement",
     title: "Procurement GTM from nothing to $1.5M monthly GTV",
-    href: null,
-    hrefLabel: null,
+    href: "https://valcoregpo.com/",
+    hrefLabel: "valcoregpo.com",
     summary:
-      "As Head of Group Purchasing / Business Development at Valstone, I launched a B2B procurement platform with no GTM motion, pipeline, or contract portfolio — then built all three. That included a data-driven pass over 1,800+ target accounts representing $92M in addressable spend, and direct supplier agreements across MRO, logistics, IT, and indirect.",
+      "As Head of Group Purchasing / Business Development at Valstone, I launched a B2B procurement platform with no GTM motion, pipeline, or contract portfolio — then built all three. That included a data-driven pass over 1,800+ target accounts representing $92M in addressable spend, and direct supplier agreements across MRO, logistics, IT, and indirect. The public-facing GPO from that build is Valcore.",
     results: [
       "Scaled to $1.5M in monthly GTV",
       "~30 new enterprise members added per month",
@@ -300,6 +329,7 @@ export const experience = [
     dates: "Dec 2025 — Jul 2026 · Dallas",
     points: [
       "Launched a B2B procurement platform from zero: GTM, pipeline, and contracts to $1.5M monthly GTV and ~30 new enterprise members per month.",
+      "Helped stand up the public GPO — Valcore (valcoregpo.com) — in under a year: 20+ contracts, 33 members, still growing.",
       "Directed analysis of 1,800+ target accounts representing $92M in addressable spend.",
       "Negotiated supplier agreements delivering up to 40% savings and an 18% average across MRO, logistics, IT, and indirect.",
     ],

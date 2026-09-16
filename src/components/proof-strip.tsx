@@ -1,4 +1,4 @@
-import { proofMetrics, sources } from "@/lib/data";
+import { liveProperties, proofMetrics, sources } from "@/lib/data";
 
 export function ProofStrip() {
   return (
@@ -12,9 +12,10 @@ export function ProofStrip() {
             </h2>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
-            No invented testimonials, logos, or savings percentages. Every
-            figure below is from the résumé, the Upwork case entries, or the
-            2025 CoreTrust Closed/Won reports.
+            No invented testimonials, logos, or savings percentages. Figures
+            below are from the résumé, the Upwork case entries, the 2025
+            CoreTrust Closed/Won reports, and Anthony&apos;s Valcore operating
+            snapshot.
           </p>
         </div>
 
@@ -52,7 +53,36 @@ export function ProofStrip() {
               {sources[metric.source]}
             </li>
           ))}
+          <li>
+            <span className="font-medium text-foreground/80">Valcore.</span>{" "}
+            {sources.valcore}
+          </li>
         </ol>
+
+        <div className="mt-10 grid gap-px overflow-hidden rounded-sm bg-[var(--rule)] sm:grid-cols-2">
+          {liveProperties.map((property) => (
+            <a
+              key={property.href}
+              href={property.href}
+              rel="noreferrer"
+              target="_blank"
+              className="group flex flex-col bg-background p-6 transition-colors hover:bg-muted/40 sm:p-7"
+            >
+              <p className="text-[0.68rem] tracking-[0.16em] text-[var(--brass)] uppercase">
+                Live property
+              </p>
+              <p className="font-heading mt-3 text-2xl tracking-tight">
+                {property.name}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {property.note}
+              </p>
+              <span className="mt-4 text-sm text-[var(--brass)] underline-offset-4 group-hover:underline">
+                {property.hrefLabel}
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

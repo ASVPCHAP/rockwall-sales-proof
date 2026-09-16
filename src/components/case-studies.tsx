@@ -7,13 +7,14 @@ export function CaseStudies() {
     <section id="work" className="section border-b border-[var(--rule)]">
       <div className="wrap">
         <p className="kicker">Selected projects</p>
-        <h2 className="font-heading mt-3 max-w-[18ch] text-3xl tracking-tight sm:text-5xl">
-          Five pieces of work, in the operator&apos;s own numbers.
+        <h2 className="font-heading mt-3 max-w-[20ch] text-3xl tracking-tight sm:text-5xl">
+          Work in the operator&apos;s own numbers.
         </h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-          These are the Upwork portfolio entries — GTM systems, ops rebuilds,
-          LLM cost control, a procurement motion from zero, and PE enterprise
-          sales. Results are copied from those entries, not dressed up.
+          Live products first — AgeriteCRM and Valcore GPO — then the Upwork
+          entries: ops rebuilds, LLM cost control, the Valstone GTM behind
+          Valcore, and PE enterprise sales. Results are copied from those
+          sources, not dressed up.
         </p>
 
         <div className="mt-12 grid gap-5">
@@ -34,7 +35,7 @@ export function CaseStudies() {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      {study.hrefLabel}
+                      {study.hrefLabel} →
                     </a>
                   ) : null}
                 </CardHeader>
