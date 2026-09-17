@@ -33,9 +33,9 @@ export function Hero() {
           <strong className="font-medium text-foreground">
             over $100 million in spend
           </strong>
-          , including Canada. Top 1% of CoreTrust reps in 2023 and 2024. I
-          automate GTM in {gtmTools.join(", ")} — and install the same motion at
-          Rockwall Partners.
+          . I work remotely from Dallas, TX. Top 1% of CoreTrust reps in 2023 and
+          2024. I automate GTM in {gtmTools.join(", ")} — and install the same
+          motion at Rockwall Partners.
         </p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Button

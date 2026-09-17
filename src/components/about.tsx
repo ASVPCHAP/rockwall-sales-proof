@@ -12,11 +12,11 @@ export function About() {
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
             Ten-plus years closing multi-stakeholder deals from $1M to $23M+ in
-            quota. Advisor (1099) to Rampart Corporation, a white-label GPO — 56
-            contracts and over $100 million in spend, also present in Canada.
-            Rockwall Partners is the AI operating-partner seat: LLMs and
-            recruitment-platform partnerships for Rampart, separate from that
-            advisor role.
+            quota. Advisor (1099) to Rampart Corporation, a Canada-based
+            white-label GPO — 56 contracts and over $100 million in spend. I work
+            remotely from Dallas, TX. Rockwall Partners is the AI operating-partner
+            seat: LLMs and recruitment-platform partnerships for Rampart, separate
+            from that advisor role.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
             Based in {site.location} ({site.timezone}). Experienced selling fully
