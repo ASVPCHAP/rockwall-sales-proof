@@ -22,16 +22,16 @@ const instrument = Instrument_Serif({
   style: ["normal", "italic"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rockwallpartners.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://chapman-kappa.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: site.title,
-    template: `%s · ${site.firm}`,
+    template: `%s · Anthony Chapman's Portfolio`,
   },
   description: site.description,
-  applicationName: site.firm,
+  applicationName: "Anthony Chapman's Portfolio",
   authors: [{ name: site.name, url: site.website }],
   creator: site.name,
   keywords: [
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: site.title,
     description: site.description,
-    siteName: site.firm,
+    siteName: "Anthony Chapman's Portfolio",
   },
   twitter: {
     card: "summary_large_image",

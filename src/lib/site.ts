@@ -1,6 +1,6 @@
 export const site = {
   name: "Anthony Chapman",
-  title: "Anthony Chapman — AI Operating Partner",
+  title: "Anthony Chapman's Portfolio",
   firm: "Rockwall Partners",
   location: "Dallas, TX",
   timezone: "Central Time",
