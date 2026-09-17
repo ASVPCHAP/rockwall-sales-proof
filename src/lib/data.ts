@@ -160,7 +160,7 @@ export const coreTrustQuarters = [
     projectedSpend: 25_675_361.24,
     ctExpected: 343_672.74,
     salesComp: 483_992.65,
-    image: "/proof/coretrust-q1-2025.png",
+    image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/proof/coretrust-q1-2025.png",
     width: 1509,
     height: 574,
   },
@@ -171,7 +171,7 @@ export const coreTrustQuarters = [
     projectedSpend: 27_471_009.89,
     ctExpected: 200_912.53,
     salesComp: 277_290.04,
-    image: "/proof/coretrust-q2-2025.png",
+    image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/proof/coretrust-q2-2025.png",
     width: 1438,
     height: 634,
   },
@@ -182,7 +182,7 @@ export const coreTrustQuarters = [
     projectedSpend: 15_963_363.32,
     ctExpected: 137_047.52,
     salesComp: 177_205.16,
-    image: "/proof/coretrust-q3-2025.png",
+    image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/proof/coretrust-q3-2025.png",
     width: 1485,
     height: 601,
   },
@@ -193,7 +193,7 @@ export const coreTrustQuarters = [
     projectedSpend: 11_991_284.15,
     ctExpected: 207_397.56,
     salesComp: 297_006.98,
-    image: "/proof/coretrust-q4-2025.png",
+    image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/proof/coretrust-q4-2025.png",
     width: 1657,
     height: 717,
   },
@@ -208,7 +208,7 @@ export const coreTrustYtd = {
 } as const;
 
 export const coreTrustConference = {
-  image: "/photos/coretrust-conference-meals.jpg",
+  image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/photos/coretrust-conference-meals.jpg",
   width: 1294,
   height: 1017,
   alt: "Group selfie at a CoreTrust conference meal-packing event: colleagues in blue hairnets and CoreTrust lanyards around packing bins and tables in a hotel ballroom.",
@@ -281,7 +281,7 @@ export const liveProperties = [
 ] as const;
 
 export const valcoreOffsite = {
-  image: "/photos/valcore-montreal-curling.jpg",
+  image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/photos/valcore-montreal-curling.jpg",
   width: 1281,
   height: 912,
   alt: "Valstone/Valcore team at Royal Montreal Curling Club: operators and Valstone colleagues on the ice with curling stones and brooms, club crest (founded 1807) in the foreground.",
@@ -291,7 +291,7 @@ export const valcoreOffsite = {
 } as const;
 
 export const valcoreClosedWon = {
-  image: "/proof/valcore-closed-won-by-category.png",
+  image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/proof/valcore-closed-won-by-category.png",
   width: 1801,
   height: 1422,
   deals: 131,
@@ -684,7 +684,7 @@ export const horizon3 = {
     },
   ],
   photo: {
-    image: "/photos/horizon3-team.webp",
+    image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/photos/horizon3-team.webp",
     width: 1100,
     height: 619,
     alt: "Horizon3.ai team photo.",
@@ -756,7 +756,7 @@ export const fiveStarNutrition = {
   gallery: [
     {
       id: "wtamu-opener",
-      image: "/photos/fivestar-wtamu-opener.jpg",
+      image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/photos/fivestar-wtamu-opener.jpg",
       width: 1249,
       height: 1717,
       alt: "5 Star Nutrition table at the West Texas A&M Women’s Basketball Opener: Anthony Chapman with a mascot in buffalo horns. Overlay: sold over 500 supplement products; prospected gyms and universities for supplement services; YOY growth 25–50%.",
@@ -769,7 +769,7 @@ export const fiveStarNutrition = {
     },
     {
       id: "tornado-alley",
-      image: "/photos/fivestar-tornado-alley.jpg",
+      image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/photos/fivestar-tornado-alley.jpg",
       width: 1320,
       height: 1748,
       alt: "Group photo on the Tornado Alley CrossFit floor with Anthony Chapman in a blue 5 Star Nutrition polo. Overlay: secured a 2-year deal; over 150 members signed up; helped grow their business by 50+ members.",
@@ -782,7 +782,7 @@ export const fiveStarNutrition = {
     },
     {
       id: "anytime-fitness",
-      image: "/photos/fivestar-anytime-fitness.jpg",
+      image: "https://cdn.jsdelivr.net/gh/ASVPCHAP/rockwall-sales-proof@main/public/photos/fivestar-anytime-fitness.jpg",
       width: 1268,
       height: 2070,
       alt: "Anthony Chapman at a 5 Star Nutrition sampling table inside Anytime Fitness, with members at the booth. Overlay: secured a 2-year partnership with one of the largest gym chains in Texas.",
