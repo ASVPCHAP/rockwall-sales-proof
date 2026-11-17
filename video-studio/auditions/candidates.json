@@ -1,0 +1,17 @@
+{
+  "_note": "Voice auditions 2026-11-17. Library voices are permanent. Designed voices are previews: save the chosen one to your ElevenLabs account (POST /v1/text-to-voice with generated_voice_id) before it expires, then use the new voice_id.",
+  "passage": "auditions/passage.txt",
+  "beats": {"pulse": "scripts/beat.py --mode pulse --bpm 72", "trance": "scripts/beat.py --mode trance --bpm 66"},
+  "library": {
+    "Bill": "pqHfZKP75CvOlQylNhV4", "Brian": "nPczCjzI2devNBz1zQrb", "Adam": "pNInz6obpgDQGcFmaJgB",
+    "Roger": "CwhRBWXzGAHq8TQ4Fs17", "George": "JBFqnCBsd6RMkjVDRZzb", "Daniel": "onwK4e9ZLuTAKqWW03F9"
+  },
+  "designed": {
+    "deacon": {"description": "An older African-American man in his sixties, a church deacon and father figure. Deep, warm, slightly gravelly baritone with a gentle Southern cadence. Speaks slowly and deliberately with weight and long pauses, like a late-night talk with his son. Studio-quality recording.",
+               "previews": {"1": "BImqe9mt23t8c622XWo9", "2": "TGqQvrqMe3ma2BVZgC1Q", "3": "WyCn0wootdLphMdJoFib"}},
+    "texan":  {"description": "A weathered white Texas rancher in his late fifties. Deep, low, unhurried Southern drawl, calm and grounded with a little gravel. Speaks slowly like an old cowboy giving hard-earned advice by a fire. Studio-quality recording.",
+               "previews": {"1": "EBlzQiItVjP9SZXw0exR", "2": "wageup4NopVMGcwvYKBw", "3": "pZ6eGmA2uJWX3CtLlnJj"}},
+    "mentor": {"description": "An old-school wise mentor in his seventies with a neutral American accent. Very deep bass voice with natural vocal fry and gravitas, like an old movie narrator or grandfather storyteller. Slow, steady, hypnotic, measured pacing. Studio-quality recording.",
+               "previews": {"1": "U8mmRSvhU1H7fTPLRTZG", "2": "vA9J6GtwY81T63yzIx4O", "3": "tQxzeq8dmCA54Y4wopj9"}}
+  }
+}

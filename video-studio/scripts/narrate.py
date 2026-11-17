@@ -89,8 +89,9 @@ def main():
     args.out.parent.mkdir(parents=True, exist_ok=True)
 
     if args.polish_only:
-        with wave.open(str(args.script)) as w:
-            rate = w.getframerate()
+        rate = int(subprocess.run(  # works for wav, mp3 (ElevenLabs), m4a recordings...
+            ["ffprobe", "-v", "error", "-select_streams", "a:0", "-show_entries", "stream=sample_rate",
+             "-of", "csv=p=0", str(args.script)], capture_output=True, text=True, check=True).stdout.strip())
         polish(args.script, args.out, args.pitch, rate)
     else:
         with tempfile.TemporaryDirectory() as td:

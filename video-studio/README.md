@@ -88,6 +88,26 @@ BHATT uses full anime footage. That works for some channels and gets others **cl
    ```
    Targets: avg shot 2.5–4.5 s · 110–125 wpm · ~1 s pauses.
 
+### ElevenLabs voice (chosen direction)
+The key is never stored in the repo. On your own computer, `export ELEVENLABS_API_KEY=sk_...`. In a Claude cloud session it's saved as a network secret and injected automatically.
+```bash
+.venv/bin/python scripts/eleven.py voices                                   # list voices on the account
+.venv/bin/python scripts/eleven.py say VOICE_ID my_script.txt out/vo.mp3 --speed 0.85
+.venv/bin/python scripts/narrate.py out/vo.mp3 out/vo.wav --polish-only --pitch 1.0
+```
+`--speed` (0.7–1.2) sets pace; aim for ~115–125 wpm and check with `analyze.py`. Audition voice IDs are in `auditions/candidates.json`. Cost is about 1 credit per character, so a 25-minute episode is roughly 17k characters.
+
+### Music beds
+```bash
+.venv/bin/python scripts/beat.py media/music/pulse.wav  --mode pulse  --bpm 72 --minutes 4   # slow trap 808
+.venv/bin/python scripts/beat.py media/music/trance.wav --mode trance --bpm 66 --minutes 4   # hypnotic
+.venv/bin/python scripts/mix.py out/vo.wav media/music/pulse.wav out/podcast.mp3 --polish   # audio-only master
+```
+The generated beats are copyright-free placeholders. Use a produced or licensed track for releases.
+
+### Episodes
+Start each episode from `episodes/BRIEF_TEMPLATE.md`.
+
 ### Verified in testing
 The full pipeline was run end to end on generated test footage. Narration came out at **123 wpm with ~1.0 s average pauses**, matching the reference. See `samples/` for a 20 s test build and a sample voiceover (placeholder fractal footage, not real clips).
 
