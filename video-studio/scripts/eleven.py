@@ -8,6 +8,7 @@ The API key is never stored in this repo. Either:
 Usage:
     .venv/bin/python scripts/eleven.py voices
     .venv/bin/python scripts/eleven.py say  VOICE_ID script.txt out/vo.mp3 [--speed 0.9] [--stability 0.55]
+    .venv/bin/python scripts/eleven.py music music/hypnotic.txt media/music/bed.mp3 --seconds 150
     .venv/bin/python scripts/eleven.py design "deep weathered Southern baritone, 60s, slow and warm" sample.txt out/designs/
 
 `say` reads the same script format as narrate.py (one thought per line, blank line = pause,
@@ -137,6 +138,18 @@ def cmd_design(a):
     print("To keep one: POST /v1/text-to-voice with its generated_voice_id (see README).")
 
 
+def cmd_music(a):
+    """Instrumental bed from a text prompt (Eleven Music; cleared for commercial use on paid plans).
+    Costs roughly 400 credits per minute, so generate 2-3 minutes and let build.py/mix.py loop it."""
+    prompt = Path(a.prompt).read_text().strip() if Path(a.prompt).is_file() else a.prompt
+    audio, _ = call("POST", "/v1/music?output_format=mp3_44100_128", {
+        "prompt": prompt, "music_length_ms": int(a.seconds * 1000), "force_instrumental": True,
+    }, raw=True)
+    Path(a.out).parent.mkdir(parents=True, exist_ok=True)
+    Path(a.out).write_bytes(audio)
+    print(f"wrote {a.out}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -151,6 +164,11 @@ def main():
     d.add_argument("description"), d.add_argument("sample"), d.add_argument("outdir")
     d.add_argument("--name", default="design")
     d.set_defaults(fn=cmd_design)
+    mu = sub.add_parser("music")
+    mu.add_argument("prompt", help="prompt text, or a .txt file holding it")
+    mu.add_argument("out")
+    mu.add_argument("--seconds", type=float, default=120)
+    mu.set_defaults(fn=cmd_music)
     a = ap.parse_args()
     a.fn(a)
 
