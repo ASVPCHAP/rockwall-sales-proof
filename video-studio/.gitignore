@@ -1,0 +1,6 @@
+.venv/
+voices/*.onnx
+voices/*.onnx.json
+media/
+out/
+__pycache__/

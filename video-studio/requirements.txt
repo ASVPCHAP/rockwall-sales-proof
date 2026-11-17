@@ -1,0 +1,9 @@
+# Open-source tools used by video-studio/scripts
+yt-dlp            # download videos you have rights to (run on your own computer; cloud IPs get blocked)
+scenedetect       # cut detection -> shot length / pacing analysis
+opencv-python     # video decoding for scenedetect
+librosa           # music analysis: tempo, bass energy
+soundfile
+numpy
+faster-whisper    # speech-to-text: captions + voice pacing (runs on CPU)
+piper-tts         # free local text-to-speech voices
