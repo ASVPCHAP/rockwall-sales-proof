@@ -11,8 +11,8 @@ Usage:
     .venv/bin/python scripts/eleven.py music music/hypnotic.txt media/music/bed.mp3 --seconds 150
     .venv/bin/python scripts/eleven.py design "deep weathered Southern baritone, 60s, slow and warm" sample.txt out/designs/
 
-`say` reads the same script format as narrate.py (one thought per line, blank line = pause,
-# comments skipped, [pause N] honored), sends it in paragraph-sized chunks with request stitching
+`say` reads narrate.py's format (one thought per line, blank line = pause, # comments, [pause N])
+and the episode format ('=== 00:00 TITLE ===' chapters, [.] [..] [BREATH] pauses; see parse_script), sends it in paragraph-sized chunks with request stitching
 so the voice stays consistent across a 25-minute script, and inserts real silence for pauses.
 Then polish it:  .venv/bin/python scripts/narrate.py out/vo.mp3 out/vo.wav --polish-only --pitch 1.0
 """
@@ -21,6 +21,7 @@ import base64
 import json
 import os
 import re
+import string
 import subprocess
 import sys
 import tempfile
@@ -30,7 +31,11 @@ from pathlib import Path
 API = "https://api.elevenlabs.io"
 KEY = os.environ.get("ELEVENLABS_API_KEY", "proxy-injected")
 MODEL = "eleven_multilingual_v2"  # most natural long-form model
-LINE_GAP, PARAGRAPH_GAP = 0.45, 1.4
+LINE_GAP, PARAGRAPH_GAP, CHAPTER_GAP = 0.45, 1.0, 2.5
+# Pause markers at the end of a line (episode script format): exact silence after that line.
+MARKERS = {"[.]": 0.7, "[..]": 1.4, "[BREATH]": 2.2}
+MARKER_RE = re.compile(r"\s*(\[\.\.?\]|\[BREATH\])\s*$")
+HEADER_RE = re.compile(r"^===\s*(?:(\d+:\d+)\s+)?(.+?)\s*===\s*$")
 
 
 def call(method, path, body=None, raw=False):
@@ -48,7 +53,18 @@ def call(method, path, body=None, raw=False):
 
 
 def parse_script(text):
-    """-> list of blocks: ('speak', paragraph_text) or ('pause', seconds)."""
+    """-> list of blocks: ('speak', paragraph_text) | ('pause', seconds) | ('chapter', title).
+
+    Formats understood:
+      * one thought per line; consecutive lines form a paragraph (short <break> between lines)
+      * blank line = paragraph pause; [pause N] = exact silence; '# ...' = comment
+      * episode format: '=== 00:00  TITLE ===' chapter headers (text before the first header is skipped),
+        lines of '=' skipped, and [.] / [..] / [BREATH] at a line end = 0.7 / 1.4 / 2.2 s of silence.
+    """
+    lines = text.splitlines()
+    if any(HEADER_RE.match(l.strip()) for l in lines):
+        first = next(i for i, l in enumerate(lines) if HEADER_RE.match(l.strip()))
+        lines = lines[first:]
     blocks, para = [], []
 
     def flush():
@@ -56,21 +72,46 @@ def parse_script(text):
             blocks.append(("speak", "\n".join(para)))
             para.clear()
 
-    for raw in text.splitlines():
+    for raw in lines:
         line = raw.strip()
-        if line.startswith("#"):
+        if line.startswith("#") or (line and set(line) == {"="}):
             continue
+        h = HEADER_RE.match(line)
         m = re.fullmatch(r"\[pause\s+([\d.]+)\]", line)
-        if m:
+        mk = MARKER_RE.search(line)
+        if h:
+            flush()
+            blocks.append(("chapter", string.capwords(h.group(2).lower())))
+        elif m:
             flush()
             blocks.append(("pause", float(m.group(1))))
         elif not line:
             flush()
-            blocks.append(("pause", PARAGRAPH_GAP))
+            if blocks and blocks[-1][0] == "speak":
+                blocks.append(("pause", PARAGRAPH_GAP))
+        elif mk:
+            para.append(line[: mk.start()].rstrip())
+            flush()
+            blocks.append(("pause", MARKERS[mk.group(1)]))
         else:
             para.append(line)
     flush()
     return blocks
+
+
+def select_chapters(blocks, spec):
+    """Keep only chapters in spec like '1' or '1-3' (1-based) - for cheap test renders."""
+    if not spec:
+        return blocks
+    lo, _, hi = spec.partition("-")
+    lo, hi = int(lo), int(hi or lo)
+    out, n = [], 0
+    for b in blocks:
+        if b[0] == "chapter":
+            n += 1
+        if lo <= n <= hi:
+            out.append(b)
+    return out
 
 
 def tts(voice_id, text, speed, stability, style, prev_ids):
@@ -96,19 +137,29 @@ def cmd_voices(_):
 
 
 def cmd_say(a):
-    blocks = parse_script(Path(a.script).read_text())
+    blocks = select_chapters(parse_script(Path(a.script).read_text()), a.chapters)
     chars = sum(len(t) for k, t in blocks if k == "speak")
-    print(f"{chars} characters to synthesize")
+    print(f"{chars} characters to synthesize (~{chars} credits)")
+    if a.dry_run:
+        return
     out = Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as td:
-        parts, prev = [], []
+        parts, prev, chapters, t = [], [], [], 0.0
         for i, (kind, val) in enumerate(blocks):
             p = Path(td) / f"{i:04d}.wav"
-            if kind == "pause":
+            if kind in ("pause", "chapter"):
+                if kind == "chapter":
+                    if parts:  # gap before every chapter except the first
+                        silence = Path(td) / f"{i:04d}_gap.wav"
+                        ff("-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", str(CHAPTER_GAP), str(silence))
+                        parts.append(silence)
+                        t += CHAPTER_GAP
+                    chapters.append((t, val))
+                    continue
                 ff("-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", str(val), str(p))
             else:
-                # each line inside a paragraph gets a breath: ElevenLabs honors <break> tags
+                # lines inside a paragraph get a short breath: ElevenLabs honors <break> tags
                 text = f' <break time="{LINE_GAP}s" /> '.join(val.splitlines())
                 audio, rid = tts(a.voice, text, a.speed, a.stability, a.style, prev)
                 if rid:
@@ -118,10 +169,22 @@ def cmd_say(a):
                 ff("-i", str(mp3), "-ac", "1", "-ar", "44100", str(p))
                 print(f"  chunk {i}: {len(text)} chars")
             parts.append(p)
+            t += probe_duration(p)
         lst = Path(td) / "list.txt"
         lst.write_text("".join(f"file '{p}'\n" for p in parts))
         ff("-f", "concat", "-safe", "0", "-i", str(lst), "-b:a", "192k", str(out))
-    print(f"wrote {out}")
+    if chapters:
+        # YouTube chapter list. mix.py/build.py add an intro offset: pass --offset to shift.
+        lines = [f"{int((s + a.offset) // 60)}:{int((s + a.offset) % 60):02d} {title}" for s, title in chapters]
+        lines[0] = "0:00 " + chapters[0][1]
+        Path(str(out) + ".chapters.txt").write_text("\n".join(lines) + "\n")
+        print(f"chapters -> {out}.chapters.txt")
+    print(f"wrote {out}  ({t / 60:.1f} min)")
+
+
+def probe_duration(path):
+    return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
+                                 str(path)], capture_output=True, text=True, check=True).stdout)
 
 
 def cmd_design(a):
@@ -159,6 +222,9 @@ def main():
     s.add_argument("--speed", type=float, default=0.9, help="0.7-1.2; lower = slower delivery")
     s.add_argument("--stability", type=float, default=0.55, help="higher = steadier, more monotone")
     s.add_argument("--style", type=float, default=0.15, help="higher = more dramatic")
+    s.add_argument("--chapters", help="render only these chapters, e.g. 1 or 2-4 (cheap tests)")
+    s.add_argument("--offset", type=float, default=1.5, help="seconds of intro music before the voice")
+    s.add_argument("--dry-run", action="store_true", help="only count characters (= credits)")
     s.set_defaults(fn=cmd_say)
     d = sub.add_parser("design")
     d.add_argument("description"), d.add_argument("sample"), d.add_argument("outdir")
