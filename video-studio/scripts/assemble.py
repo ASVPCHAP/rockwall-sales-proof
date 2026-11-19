@@ -196,6 +196,7 @@ def xfade_chain(files, lengths, out):
     if len(files) == 1:
         run(["ffmpeg", "-y", "-v", "error", "-i", str(files[0]), "-c", "copy", str(out)])
         return
+    lengths = [dur(f) for f in files]  # offsets from the real files, never from the plan
     inputs, graph, cur_len, last = [], [], lengths[0], "[0:v]"
     for f in files:
         inputs += ["-i", str(f)]
@@ -250,19 +251,29 @@ def main():
             length = d + (0 if last_overall else XF)
             out = work / f"shot_{s['id']}.mp4"
             hero = heroes / f"{s['id']}.mp4" if heroes and (heroes / f"{s['id']}.mp4").exists() else None
+            # re-render a cached shot whose length is off (e.g. a run that was stopped mid-write)
+            if out.exists() and abs(dur(out) - length) > 0.1:
+                out.unlink()
             if not out.exists():
                 render_shot(images / f"{s['id']}.png", length, move, out, hero)
             move += 1
             files.append(out)
             lens.append(length)
         cf = work / f"chapter_{ci:02d}.mp4"
+        expected = sum(lens) - XF * (len(lens) - 1)
+        if cf.exists() and abs(dur(cf) - expected) > 0.2:
+            cf.unlink()
         if not cf.exists():
             xfade_chain(files, lens, cf)
         chapter_files.append(cf)
         chapter_lens.append(sum(lens) - XF * (len(lens) - 1))
         print(f"chapter {ci + 1}/{len(names)} {name}: {len(cs)} shots, {span:.0f}s", flush=True)
     bg = work / "background.mp4"
+    if bg.exists():
+        bg.unlink()
     xfade_chain(chapter_files, chapter_lens, bg)
+    if abs(dur(bg) - total) > 0.5:
+        raise SystemExit(f"background is {dur(bg):.1f}s, expected {total:.1f}s")
 
     # overlays: title, chapter titles, scripture cards
     ov = []  # (png, start, duration)
