@@ -1,0 +1,21 @@
+{
+ "_note": "Episode 1 'The Soul That Died' scripture cards. KJV (public domain). 'cue' = words in the sermon where the card fades in (matched against the cut's word timestamps at assembly). Shown ~7 s.",
+ "cards": [
+  {"chapter": "Can A Soul Come Back To Life?", "cue": "and god said let us make man", "ref": "Genesis 1:27", "text": "So God created man in his own image, in the image of God created he him; male and female created he them."},
+  {"chapter": "The Breath Of Life", "cue": "the lord god formed man", "ref": "Genesis 2:7", "text": "And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul."},
+  {"chapter": "What Is The Soul?", "cue": "let this mind be in you", "ref": "Philippians 2:5", "text": "Let this mind be in you, which was also in Christ Jesus."},
+  {"chapter": "What Is The Soul?", "cue": "dead in trespasses", "ref": "Ephesians 2:1", "text": "And you hath he quickened, who were dead in trespasses and sins."},
+  {"chapter": "What Is The Soul?", "cue": "baptize you with the holy ghost", "ref": "Matthew 3:11", "text": "He shall baptize you with the Holy Ghost, and with fire."},
+  {"chapter": "The Day Adam Died", "cue": "but of the tree of the knowledge", "ref": "Genesis 2:17", "text": "But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die."},
+  {"chapter": "The Day Adam Died", "cue": "circumstances determine", "ref": "EMOTION — Webster's Dictionary, 1828", "text": "Literally, a moving of the mind or soul; hence, any agitation of mind or excitement of sensibility."},
+  {"chapter": "The Soul That Sinneth", "cue": "behold all souls are mine", "ref": "Ezekiel 18:4", "text": "Behold, all souls are mine; as the soul of the father, so also the soul of the son is mine: the soul that sinneth, it shall die."},
+  {"chapter": "The Soul That Sinneth", "cue": "bear the inequity of the father", "ref": "Ezekiel 18:20", "text": "The son shall not bear the iniquity of the father, neither shall the father bear the iniquity of the son."},
+  {"chapter": "The Soul That Sinneth", "cue": "but if the wicked will turn", "ref": "Ezekiel 18:21", "text": "But if the wicked will turn from all his sins that he hath committed, and keep all my statutes, and do that which is lawful and right, he shall surely live, he shall not die."},
+  {"chapter": "He Called You", "cue": "psalm 65 blessed", "ref": "Psalm 65:4", "text": "Blessed is the man whom thou choosest, and causest to approach unto thee."},
+  {"chapter": "He Called You", "cue": "stretched out the", "ref": "Esther 5:2", "text": "And the king held out to Esther the golden sceptre that was in his hand. So Esther drew near, and touched the top of the sceptre."},
+  {"chapter": "The Proof", "cue": "that same spirit that raised up", "ref": "Romans 8:11", "text": "But if the Spirit of him that raised up Jesus from the dead dwell in you, he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you."},
+  {"chapter": "The Proof", "cue": "now if christ be preached", "ref": "1 Corinthians 15:14", "text": "And if Christ be not risen, then is our preaching vain, and your faith is also vain."},
+  {"chapter": "The Proof", "cue": "but now is christ", "ref": "1 Corinthians 15:20", "text": "But now is Christ risen from the dead, and become the firstfruits of them that slept."},
+  {"chapter": "Come Fully Alive", "cue": "every man that have this hope", "ref": "1 John 3:3", "text": "And every man that hath this hope in him purifieth himself, even as he is pure."}
+ ]
+}
