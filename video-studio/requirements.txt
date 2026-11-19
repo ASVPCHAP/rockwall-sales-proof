@@ -7,3 +7,4 @@ soundfile
 numpy
 faster-whisper    # speech-to-text: captions + voice pacing (runs on CPU)
 piper-tts         # free local text-to-speech voices
+pillow

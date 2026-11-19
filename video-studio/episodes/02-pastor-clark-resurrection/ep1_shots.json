@@ -1,0 +1,750 @@
+{
+ "style": "1980s Japanese anime feature film still, hand-painted cel animation with painted backgrounds, soft film grain, slight color fading, cinematic widescreen composition, emotional and deep. No text, no logos, no watermarks.",
+ "refs": {
+  "him": "https://file.deepytb.com/media/tasks/task_ad427db895a74b22b9edc5ec4e6ccc31/0.png",
+  "cast": "https://file.deepytb.com/media/tasks/task_ceb896061bb5465f8356bb699cd0b4d7/0.png"
+ },
+ "shots": [
+  {
+   "id": "001",
+   "chapter": "Life Is So Quick",
+   "refs": [],
+   "hero": false,
+   "reuse": "/tmp/claude-0/-home-user-rockwall-sales-proof/8fce45f6-348a-512a-9b5c-19c258011e63/scratchpad/character/s1_sunset.png",
+   "prompt": ""
+  },
+  {
+   "id": "002",
+   "chapter": "Life Is So Quick",
+   "refs": [
+    "him"
+   ],
+   "hero": true,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He stands still on a train platform at dusk as a long commuter train streaks past in a motion blur, his jacket whipping in the wind, platform lights glowing."
+  },
+  {
+   "id": "003",
+   "chapter": "Life Is So Quick",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Close-up of his face reflected in a dark rain-streaked window at night; faintly mirrored beside his reflection is a translucent younger version of himself at age 30."
+  },
+  {
+   "id": "004",
+   "chapter": "Can A Soul Come Back To Life?",
+   "refs": [],
+   "hero": false,
+   "prompt": "A cracked dry riverbed under a stormy evening sky, and from one crack a single bright green sprout pushes up, catching a ray of light."
+  },
+  {
+   "id": "005",
+   "chapter": "Can A Soul Come Back To Life?",
+   "refs": [],
+   "hero": false,
+   "prompt": "Creation: in deep cosmic darkness full of stars, glowing streams of golden light shape the outline of a human figure from swirling red clay. No faces, reverent, awe."
+  },
+  {
+   "id": "006",
+   "chapter": "Can A Soul Come Back To Life?",
+   "refs": [],
+   "hero": false,
+   "prompt": "Adam and Eve seen from behind as small silhouettes, modestly hidden by tall ferns, standing in a radiant paradise garden at dawn with a river, waterfalls and animals."
+  },
+  {
+   "id": "007",
+   "chapter": "Can A Soul Come Back To Life?",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He kneels at the edge of a still lake at dawn looking at his reflection in the water; the reflection glows with faint warm light."
+  },
+  {
+   "id": "008",
+   "chapter": "Why Don't We Reach For God?",
+   "refs": [
+    "cast",
+    "him"
+   ],
+   "hero": false,
+   "prompt": "His teenage son is the boy from the cast reference sheet (navy hoodie, short twists). The son lies on his bed in a dark bedroom at night, face lit blue by a phone screen, posters on the wall, scrolling endlessly, empty expression."
+  },
+  {
+   "id": "009",
+   "chapter": "Why Don't We Reach For God?",
+   "refs": [],
+   "hero": false,
+   "prompt": "A group of teenagers sit on a city stoop at night, every face lit blue by their phones, nobody looking at each other, neon signs behind."
+  },
+  {
+   "id": "010",
+   "chapter": "Why Don't We Reach For God?",
+   "refs": [
+    "him",
+    "cast"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). His teenage son is the boy from the cast reference sheet (navy hoodie, short twists). The father stands in the hallway at night looking into his son's dim room, warm hall light behind him, the son on the bed not looking up."
+  },
+  {
+   "id": "011",
+   "chapter": "Why Don't We Reach For God?",
+   "refs": [],
+   "hero": false,
+   "prompt": "The inside of a small old wooden church on a weekday night, rows of empty pews, a few warm lights on, dust in the air, a cross of plain wood on the front wall."
+  },
+  {
+   "id": "012",
+   "chapter": "Why Don't We Reach For God?",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Sunday morning: he sits in his parked pickup truck outside a small brick church, engine off, watching people go in, not moving, conflicted."
+  },
+  {
+   "id": "013",
+   "chapter": "Why Don't We Reach For God?",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Night: he kneels alone beside his bed, elbows on the mattress, hands clasped, forehead pressed to his hands, moonlight through the window."
+  },
+  {
+   "id": "014",
+   "chapter": "Why Don't We Reach For God?",
+   "refs": [],
+   "hero": true,
+   "prompt": "Close-up: a single candle on a dark wooden table, its tiny flame flickering back to life and growing brighter, warm glow pushing back the dark."
+  },
+  {
+   "id": "015",
+   "chapter": "Why Don't We Reach For God?",
+   "refs": [
+    "him",
+    "cast"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). His teenage son is the boy from the cast reference sheet (navy hoodie, short twists). Father and son walk side by side up the front steps of a small brick church at sunrise, seen from behind, the door open with warm light inside."
+  },
+  {
+   "id": "016",
+   "chapter": "The Breath Of Life",
+   "refs": [],
+   "hero": true,
+   "prompt": "Red earth at dawn in a misty primeval garden: a man-shaped form made of dust lies on the ground, and the dust begins swirling upward into shafts of golden light."
+  },
+  {
+   "id": "017",
+   "chapter": "The Breath Of Life",
+   "refs": [],
+   "hero": false,
+   "prompt": "A great wind of golden light sweeps across a man-shaped form of red dust lying in a garden, leaves and petals lifting into the air."
+  },
+  {
+   "id": "018",
+   "chapter": "The Breath Of Life",
+   "refs": [],
+   "hero": false,
+   "prompt": "Extreme close-up of a man's eye opening for the very first time, the iris reflecting a vast blue sky and clouds, a single tear of light."
+  },
+  {
+   "id": "019",
+   "chapter": "The Breath Of Life",
+   "refs": [],
+   "hero": false,
+   "prompt": "Adam stands in the Garden of Eden at golden hour among peaceful animals, a lion, deer and birds, looking around in wonder, modestly framed from the chest up."
+  },
+  {
+   "id": "020",
+   "chapter": "The Breath Of Life",
+   "refs": [],
+   "hero": false,
+   "prompt": "Symbolic still life on an old wooden desk: an open envelope and a handwritten letter melting together into one single glowing page of light."
+  },
+  {
+   "id": "021",
+   "chapter": "The Breath Of Life",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Freezing dawn in an open field: he stands with eyes closed, one hand on his chest, his breath visible as a soft cloud in the cold golden air."
+  },
+  {
+   "id": "022",
+   "chapter": "The Breath Of Life",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He stands knee-deep in a calm river at sunrise, jacket off and tied at his waist, water and mist glowing around him."
+  },
+  {
+   "id": "023",
+   "chapter": "The Breath Of Life",
+   "refs": [],
+   "hero": false,
+   "prompt": "A wide view of a lush Eden-like valley at sunrise: a winding river, enormous ancient trees, waterfalls, mist and birds."
+  },
+  {
+   "id": "024",
+   "chapter": "The Breath Of Life",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Low angle: he looks straight up through a towering tree canopy as rays of sunlight pour down through the leaves onto his face."
+  },
+  {
+   "id": "025",
+   "chapter": "What Is The Soul?",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He stands at a dusty crossroads at dusk where three dirt roads split, deciding which way to go, a wooden signpost with blank boards."
+  },
+  {
+   "id": "026",
+   "chapter": "What Is The Soul?",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Late night at a kitchen table covered in open old books and handwritten notes under one hanging lamp; he reads, head in his hand."
+  },
+  {
+   "id": "027",
+   "chapter": "What Is The Soul?",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He sits alone in his truck in heavy rain, tears in his eyes, gripping the wheel, rain streaming down the windshield."
+  },
+  {
+   "id": "028",
+   "chapter": "What Is The Soul?",
+   "refs": [],
+   "hero": false,
+   "prompt": "A heavy old wooden door standing half open in a dark hallway, warm golden light spilling out through the gap across the floor."
+  },
+  {
+   "id": "029",
+   "chapter": "What Is The Soul?",
+   "refs": [],
+   "hero": false,
+   "prompt": "A quiet hospital room at night: a patient lies under a blanket connected to a breathing machine, the monitor's green glow the only light. Calm and somber, no gore."
+  },
+  {
+   "id": "030",
+   "chapter": "What Is The Soul?",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He walks through a busy city sidewalk where everyone around him is drawn in gray and colorless like statues, and he alone is in warm color."
+  },
+  {
+   "id": "031",
+   "chapter": "What Is The Soul?",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Inside a small humble church during worship, he stands with both hands raised and eyes closed, light from a high window falling on him, people around him blurred."
+  },
+  {
+   "id": "032",
+   "chapter": "What Is The Soul?",
+   "refs": [],
+   "hero": false,
+   "prompt": "An upper room in ancient Jerusalem at night: about a dozen ordinary men and women in simple robes sit in a loose circle on the floor, no central leader, no halos; small gentle tongues of golden flame-light rest just above their heads, faces lifted in awe and joy, warm oil-lamp light, open window with stars."
+  },
+  {
+   "id": "033",
+   "chapter": "What Is The Soul?",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He walks out of the church doors into bright morning sunlight, squinting, a quiet changed look on his face."
+  },
+  {
+   "id": "034",
+   "chapter": "What Is The Soul?",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Close-up of his face at night, city lights behind him, but a new warm light glowing in his eyes."
+  },
+  {
+   "id": "035",
+   "chapter": "The Day Adam Died",
+   "refs": [],
+   "hero": false,
+   "prompt": "A single bitten fruit lying on a flat stone in a garden, the edges of the bite turning dark, everything behind it blurred and fading."
+  },
+  {
+   "id": "036",
+   "chapter": "The Day Adam Died",
+   "refs": [],
+   "hero": false,
+   "prompt": "Adam alone outside a tall closed wooden garden gate at dusk, his back to us, golden light fading behind the gate, long shadows."
+  },
+  {
+   "id": "037",
+   "chapter": "The Day Adam Died",
+   "refs": [],
+   "hero": false,
+   "prompt": "Dark storm clouds roll over a paradise garden, a tall green tree slowly turning gray and leafless, petals blowing away in the wind."
+  },
+  {
+   "id": "038",
+   "chapter": "The Day Adam Died",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Night: he sits at a kitchen table under a single bare bulb, coffee going cold, watching dark clouds drift past the window."
+  },
+  {
+   "id": "039",
+   "chapter": "The Day Adam Died",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He stands on a city street split down the middle: one half in bright sunshine, the other half under pouring rain."
+  },
+  {
+   "id": "040",
+   "chapter": "The Day Adam Died",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Night at an ATM under a streetlight: he looks at a receipt and gives a small relieved smile, the screen lighting his face."
+  },
+  {
+   "id": "041",
+   "chapter": "The Day Adam Died",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). A gloomy gray rainy morning: he sits alone at a bus stop shelter, shoulders hunched, water running off the roof."
+  },
+  {
+   "id": "042",
+   "chapter": "The Day Adam Died",
+   "refs": [],
+   "hero": false,
+   "prompt": "Ancient scene: twelve Hebrew scouts on a rocky hilltop look down into a lush green promised land valley; two of them carry an enormous cluster of grapes on a pole between them."
+  },
+  {
+   "id": "043",
+   "chapter": "The Day Adam Died",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He stands at the edge of a deep canyon at sunset looking across to a green, glowing land on the far side, wind in his jacket."
+  },
+  {
+   "id": "044",
+   "chapter": "The Day Adam Died",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Close-up: his hand reaching out toward a beam of light in a dark room, fingertips just touching it."
+  },
+  {
+   "id": "045",
+   "chapter": "The Soul That Sinneth",
+   "refs": [],
+   "hero": false,
+   "prompt": "The prophet Ezekiel, an old bearded man in rough robes, writing on a scroll by firelight beside a river at night, distant city walls and stars."
+  },
+  {
+   "id": "046",
+   "chapter": "The Soul That Sinneth",
+   "refs": [
+    "him",
+    "cast"
+   ],
+   "hero": false,
+   "prompt": "Flashback in muted sepia tones: the main character from the reference sheet as a 14-year-old boy stands in a dark doorway watching father is the tired man in the gray work shirt from the cast reference sheet. slumped at a kitchen table at night with a bottle and an ashtray."
+  },
+  {
+   "id": "047",
+   "chapter": "The Soul That Sinneth",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). A wide snowfield at dawn: a line of large old boot prints runs across it, and he stands inside them looking down."
+  },
+  {
+   "id": "048",
+   "chapter": "The Soul That Sinneth",
+   "refs": [
+    "him"
+   ],
+   "hero": true,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He steps off the line of old footprints into fresh untouched snow, beginning his own path toward the rising sun."
+  },
+  {
+   "id": "049",
+   "chapter": "The Soul That Sinneth",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Close-up of his hands pouring a bottle of liquor down a kitchen sink, his face set and determined in the background."
+  },
+  {
+   "id": "050",
+   "chapter": "The Soul That Sinneth",
+   "refs": [],
+   "hero": false,
+   "prompt": "A broken heavy iron chain lying in dewy green grass at sunrise, the broken link glinting."
+  },
+  {
+   "id": "051",
+   "chapter": "The Soul That Sinneth",
+   "refs": [
+    "him",
+    "cast"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). His teenage son is the boy from the cast reference sheet (navy hoodie, short twists). Father and son sit on a wooden dock fishing at dawn, mist on the lake, sharing a quiet laugh."
+  },
+  {
+   "id": "052",
+   "chapter": "The Soul That Sinneth",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Sunday morning: men in neat suits walk into a church while he stands across the street in his work jacket, watching, unsure he belongs."
+  },
+  {
+   "id": "053",
+   "chapter": "The Soul That Sinneth",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Late night: he sits exhausted on the outside steps of a closed church, elbows on knees, under a single lamp."
+  },
+  {
+   "id": "054",
+   "chapter": "The Soul That Sinneth",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He turns his back on a dark alley and walks toward a small house with warm lit windows at the end of the street."
+  },
+  {
+   "id": "055",
+   "chapter": "Why You Are Here",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character from the reference sheet aged to about 80, white hair and beard, sitting by a window holding an old photograph of himself at 30; same face and features."
+  },
+  {
+   "id": "056",
+   "chapter": "Why You Are Here",
+   "refs": [],
+   "hero": false,
+   "prompt": "An antique hourglass on a wooden windowsill at sunset, the last sand falling, golden light through the glass."
+  },
+  {
+   "id": "057",
+   "chapter": "Why You Are Here",
+   "refs": [],
+   "hero": false,
+   "prompt": "An empty quiet attic in afternoon light with NO people: cardboard boxes of old books, papers, an old Bible and a folded jacket, dust floating in sunbeams from a small window."
+  },
+  {
+   "id": "058",
+   "chapter": "Why You Are Here",
+   "refs": [],
+   "hero": false,
+   "prompt": "An empty dark suit hanging on a closet door, a tie draped over it, polished shoes beneath, soft morning light."
+  },
+  {
+   "id": "059",
+   "chapter": "Why You Are Here",
+   "refs": [],
+   "hero": false,
+   "prompt": "A quiet house at night where all the furniture is covered in white sheets, moonlight through the windows."
+  },
+  {
+   "id": "060",
+   "chapter": "Why You Are Here",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He reads a worn leather Bible by lamplight late at night, eyes wet, one hand resting on the page."
+  },
+  {
+   "id": "061",
+   "chapter": "Why You Are Here",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). On a windy mountaintop under a dramatic sky, he stands with arms open and face lifted, eyes closed, as if being filled."
+  },
+  {
+   "id": "062",
+   "chapter": "Why You Are Here",
+   "refs": [],
+   "hero": false,
+   "prompt": "A simple clay cup held under a waterfall of glowing water, overflowing, light spilling everywhere."
+  },
+  {
+   "id": "063",
+   "chapter": "Why You Are Here",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He walks alone down a dirt road through golden fields at sunset, content, hands in pockets."
+  },
+  {
+   "id": "064",
+   "chapter": "Something In Us Is Empty",
+   "refs": [],
+   "hero": false,
+   "reuse": "/tmp/claude-0/-home-user-rockwall-sales-proof/8fce45f6-348a-512a-9b5c-19c258011e63/scratchpad/character/s2_neon.png",
+   "prompt": ""
+  },
+  {
+   "id": "065",
+   "chapter": "Something In Us Is Empty",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). A huge mansion at night, every window lit; inside, a tiny figure of him stands alone in an enormous empty marble hall."
+  },
+  {
+   "id": "066",
+   "chapter": "Something In Us Is Empty",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). A shelf of dusty golden trophies and framed diplomas; his hand reaches toward them and stops short."
+  },
+  {
+   "id": "067",
+   "chapter": "Something In Us Is Empty",
+   "refs": [],
+   "hero": false,
+   "prompt": "A night highway seen from above, a single sports car's red taillights streaking through dark empty countryside."
+  },
+  {
+   "id": "068",
+   "chapter": "Something In Us Is Empty",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Dawn light through blinds: he sits on the edge of an unmade bed in an expensive bedroom, head in his hands."
+  },
+  {
+   "id": "069",
+   "chapter": "He Called You",
+   "refs": [],
+   "hero": false,
+   "prompt": "A Persian palace throne room: Queen Esther in royal robes waits at the edge of the light, and the king on his throne extends a golden scepter toward her."
+  },
+  {
+   "id": "070",
+   "chapter": "He Called You",
+   "refs": [],
+   "hero": false,
+   "prompt": "Close-up: a woman's hand gently reaching to touch the golden tip of a royal scepter, rich palace colors."
+  },
+  {
+   "id": "071",
+   "chapter": "He Called You",
+   "refs": [
+    "him"
+   ],
+   "hero": true,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He sits alone at a dim bar with a glass in front of him; behind him the front door swings open and brilliant white light floods in; he turns toward it."
+  },
+  {
+   "id": "072",
+   "chapter": "He Called You",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He pushes the glass away across the bar and walks toward a bright open doorway."
+  },
+  {
+   "id": "073",
+   "chapter": "He Called You",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Lying awake in bed at night, he looks toward a soft warm light glowing under the bedroom door."
+  },
+  {
+   "id": "074",
+   "chapter": "He Called You",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). On a street corner at night, he walks away from a group of old friends laughing under a streetlight, toward a distant warm light."
+  },
+  {
+   "id": "075",
+   "chapter": "He Called You",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He climbs the steps of a small brick church at dawn as the door opens and warm light reaches out to him."
+  },
+  {
+   "id": "076",
+   "chapter": "The Proof",
+   "refs": [],
+   "hero": false,
+   "prompt": "Three empty wooden crosses on a hill at dusk under a heavy dark sky, a single ray of light breaking through the clouds. No people."
+  },
+  {
+   "id": "077",
+   "chapter": "The Proof",
+   "refs": [],
+   "hero": false,
+   "prompt": "A garden tomb sealed by a huge round stone at night, guards' torches flickering in the distance, cypress trees."
+  },
+  {
+   "id": "078",
+   "chapter": "The Proof",
+   "refs": [],
+   "hero": true,
+   "prompt": "The empty tomb at sunrise: the great round stone rolled away, brilliant morning light pouring into the dark doorway, mist, olive trees."
+  },
+  {
+   "id": "079",
+   "chapter": "The Proof",
+   "refs": [],
+   "hero": false,
+   "prompt": "Inside a rock tomb: folded white linen cloths on a stone ledge, lit by a single shaft of morning light."
+  },
+  {
+   "id": "080",
+   "chapter": "The Proof",
+   "refs": [],
+   "hero": false,
+   "prompt": "An old library hall of ancient scrolls and leather books, a dusty marble bust of a philosopher, history and antiquity, dust in light beams."
+  },
+  {
+   "id": "081",
+   "chapter": "The Proof",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). In a dark room he holds a phone whose screen shows only an empty glowing search bar; his face lit pale, questioning."
+  },
+  {
+   "id": "082",
+   "chapter": "The Proof",
+   "refs": [],
+   "hero": false,
+   "prompt": "Close-up of a hospital heart monitor screen: a flat green line that suddenly jumps into a strong heartbeat."
+  },
+  {
+   "id": "083",
+   "chapter": "The Proof",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He wakes with a sharp gasp in a dark bedroom as the first dawn light floods through the window."
+  },
+  {
+   "id": "084",
+   "chapter": "The Proof",
+   "refs": [],
+   "hero": false,
+   "reuse": "/tmp/claude-0/-home-user-rockwall-sales-proof/8fce45f6-348a-512a-9b5c-19c258011e63/scratchpad/character/s4_valley.png",
+   "prompt": ""
+  },
+  {
+   "id": "085",
+   "chapter": "The Proof",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He steps out of the mouth of a dark cave into brilliant morning light, shielding his eyes, green hills ahead."
+  },
+  {
+   "id": "086",
+   "chapter": "The Proof",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He stands on a high ridge at sunrise, arms slightly open, wind in his jacket, the world glowing below."
+  },
+  {
+   "id": "087",
+   "chapter": "Come Fully Alive",
+   "refs": [],
+   "hero": false,
+   "reuse": "/tmp/claude-0/-home-user-rockwall-sales-proof/8fce45f6-348a-512a-9b5c-19c258011e63/scratchpad/character/s3_porch.png",
+   "prompt": ""
+  },
+  {
+   "id": "088",
+   "chapter": "Come Fully Alive",
+   "refs": [
+    "him"
+   ],
+   "hero": true,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He runs along a mountain ridge at sunrise, his long shadow stretching behind him, determined, never looking back."
+  },
+  {
+   "id": "089",
+   "chapter": "Come Fully Alive",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). He kneels alone at a plain wooden altar in an empty small church, morning light through a plain window falling across him."
+  },
+  {
+   "id": "090",
+   "chapter": "Come Fully Alive",
+   "refs": [
+    "him"
+   ],
+   "hero": false,
+   "prompt": "The main character is the exact man from the reference model sheet (same face, beard, hair, olive-green canvas work jacket, white t-shirt, dark brown work pants, boots). Seen from behind on the same grassy hilltop as before, he stands watching the sun RISE over rolling hills, golden morning light, peace."
+  }
+ ]
+}
