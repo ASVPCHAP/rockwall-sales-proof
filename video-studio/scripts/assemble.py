@@ -25,6 +25,7 @@ W, H, FPS = 1920, 1080, 30
 INTRO, OUTRO, XF = 4.0, 6.0, 1.0          # title seconds before voice, tail after, crossfade length
 CLIP_GAP, CHAPTER_GAP = 0.6, 1.6           # must match cut.py
 BAR = 104                                   # letterbox bar height (≈2.2:1)
+CAP = 60                                    # caption font size (px at 1080p), sits inside the bottom bar
 FONTS = Path(__file__).resolve().parent.parent / "fonts"
 SERIF, DISPLAY = str(FONTS / "EBGaramond-VF.ttf"), str(FONTS / "Cinzel-VF.ttf")
 GRADE = f"eq=contrast=1.05:saturation=0.93,vignette=PI/6,noise=alls=7:allf=t+u," \
@@ -164,7 +165,7 @@ def captions(prog_words, fixes, offset, path):
              "[V4+ Styles]",
              "Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, "
              "BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV",
-             f"Style: Default,EB Garamond,46,&H00E6F0F6,&H00000000,&H64000000,0,0,1,1.5,0,2,80,80,{(BAR - 46) // 2}",
+             f"Style: Default,EB Garamond,{CAP},&H00E6F0F6,&H00000000,&H64000000,0,0,1,1.8,0,2,80,80,{(BAR - CAP) // 2}",
              "", "[Events]", "Format: Layer, Start, End, Style, Text"]
     for i, c in enumerate(cues):
         text = " ".join(x["w"].strip() for x in c)
@@ -269,9 +270,10 @@ def main():
         chapter_lens.append(sum(lens) - XF * (len(lens) - 1))
         print(f"chapter {ci + 1}/{len(names)} {name}: {len(cs)} shots, {span:.0f}s", flush=True)
     bg = work / "background.mp4"
-    if bg.exists():
+    if bg.exists() and abs(dur(bg) - total) > 0.5:
         bg.unlink()
-    xfade_chain(chapter_files, chapter_lens, bg)
+    if not bg.exists():
+        xfade_chain(chapter_files, chapter_lens, bg)
     if abs(dur(bg) - total) > 0.5:
         raise SystemExit(f"background is {dur(bg):.1f}s, expected {total:.1f}s")
 
